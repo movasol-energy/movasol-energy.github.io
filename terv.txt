@@ -1,0 +1,59 @@
+struktura:
+
+
+about:
+bemutatkozás/story (2018 solarpro ként, 1 bekezdés) - energy & operations egyutt, kozos dolgok
+mission statement
+vezetők - management kozos, utana bal, jobb oldal management és energy
+ALTERNATIVA
+nincs szetvalasztas, egy ceg
+minősítések - ceertif, quality management
+
+
+serivces:
+epc bal, om jobb
+epc: naperomu, halozati infrastruktura, energiatarolo, egyeb
+om: alallomas uzemeltetes, naperomu uzemeltetes, minositett gyartoi szakszerviz
+ALTRENATIVA
+ gombok: megujulo projektek - fejlesztese, muszaki penzugyi tanacsadas, generalkivitelezese, meresek es uzembehelyezes, uzemeltetese, gyartoi szakszerviz
+
+
+referenciak/projektek:
+3 ful: all, kivitelezes, uzemeltetes
+all ketteosztva bal-jobb
+projektek nagy reszet athuzni solarprobol
+
+
+contact:
+telefon 1db kozos
+email 1 kozos
+google maps 
+adress
+2 db ajanlatkeres gomb kivitelezes, uzemeltetes
+ezekre katt felugro form
+ami emailt kuld
+
+
+labjegyzet:
+social media, email, telefon, cimlinkek az aloldalakra
+
+BLOG, DROPDOWN KUKA
+
+
+
+minta:
+solarpro
+sts group
+
+segitseg:
+cpanel
+
+energy belul:
+napelem
+bess
+alallomas
+
+about us on belul:
+referenciak (elozo projektek)
+
+adam domain
