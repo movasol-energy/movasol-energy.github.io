@@ -5,6 +5,7 @@ batteryre nagyobb hangsuly
 
 struktura:
 
+NEWS oldal !
 
 about:
 bemutatkozás/story (2018 solarpro ként, 1 bekezdés) - energy & operations egyutt, kozos dolgok
@@ -41,8 +42,6 @@ ami emailt kuld
 
 labjegyzet:
 social media, email, telefon, cimlinkek az aloldalakra
-
-BLOG, DROPDOWN KUKA
 
 
 
