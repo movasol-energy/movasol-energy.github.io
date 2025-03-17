@@ -1,5 +1,5 @@
-Jedlik Anyos bejelentes utananezes
-batteryre nagyobb hangsuly
+Jedlik Anyos bejelentes utananezes                                                         ! TODO !
+batteryre nagyobb hangsuly                                                                 ! TODO !
 
 
 
@@ -19,12 +19,15 @@ epc bal, om jobb
 epc: naperomu, halozati infrastruktura, energiatarolo, egyeb
 om: alallomas uzemeltetes, naperomu uzemeltetes, minositett gyartoi szakszerviz
 ALTRENATIVA
- gombok: megujulo projektek - fejlesztese, muszaki penzugyi tanacsadas, generalkivitelezese, meresek es uzembehelyezes, uzemeltetese, gyartoi szakszerviz
+ gombok:
+ megujulo projektek - fejlesztese, muszaki penzugyi tanacsadas,
+ generalkivitelezese, meresek es uzembehelyezes,
+ uzemeltetese, gyartoi szakszerviz
 
 
 referenciak/projektek:
 3 ful: all, kivitelezes, uzemeltetes
-all ketteosztva bal-jobb
+all ketteosztva bal-jobb                                                                  ! TODO !
 projektek nagy reszet athuzni solarprobol
 
 
