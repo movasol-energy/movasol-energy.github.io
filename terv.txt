@@ -5,15 +5,13 @@ batteryre nagyobb hangsuly
 
 struktura:
 
-NEWS oldal !
-
 about:
 bemutatkozás/story (2018 solarpro ként, 1 bekezdés) - energy & operations egyutt, kozos dolgok
 mission statement
 vezetők - management kozos, utana bal, jobb oldal management és energy
 ALTERNATIVA
 nincs szetvalasztas, egy ceg
-minősítések - ceertif, quality management
+minősítések - certif, quality management
 
 
 serivces:
@@ -28,6 +26,10 @@ referenciak/projektek:
 3 ful: all, kivitelezes, uzemeltetes
 all ketteosztva bal-jobb
 projektek nagy reszet athuzni solarprobol
+
+
+blog:
+NEWS oldal !
 
 
 contact:

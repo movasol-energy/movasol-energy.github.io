@@ -66,6 +66,26 @@ body {
   font-family: var(--default-font);
 }
 
+.language-switcher {
+  display: flex;
+  gap: 10px;
+}
+
+.lang-btn {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lang-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+
 a {
   color: var(--accent-color);
   text-decoration: none;
