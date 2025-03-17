@@ -9,6 +9,8 @@ felugro ablak/felso sav link/statikus ablak ami
 a jedlik programrol ir es linkel egy formkitoltore 
 
 
+hatterkepek: szurkes arnyalat, kb 10 kep ami valtogat, sajat kepek (lehet solarpro s)
+
 struktura:
 
 
