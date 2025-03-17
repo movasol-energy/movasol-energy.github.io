@@ -1,7 +1,15 @@
 function setLanguage(lang) {
-    localStorage.setItem('language', lang);
-    location.reload();
-}
+    document.getElementById("btn-hu").classList.remove("active", "inactive");
+    document.getElementById("btn-en").classList.remove("active", "inactive");
+  
+    if (lang === "hu") {
+      document.getElementById("btn-hu").classList.add("active");
+      document.getElementById("btn-en").classList.add("inactive");
+    } else {
+      document.getElementById("btn-en").classList.add("active");
+      document.getElementById("btn-hu").classList.add("inactive");
+    }
+  }  
 
 function loadLanguage() {
     let lang = localStorage.getItem('language') || 'hu'; // Default to Hungarian
