@@ -1,6 +1,6 @@
 /**
-* Template Name: Movasol
-* Template URL: https://bootstrapmade.com/Movasol-bootstrap-construction-website-template/
+* Template Name: UpConstruction
+* Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
 * Updated: Aug 07 2024 with Bootstrap v5.3.3
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
