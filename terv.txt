@@ -1,56 +1,46 @@
-Google Business Profile szerkesztése: Ádám
+Google Business Profile szerkesztése: Ádám                                                 ! TODO !
 
 
 
 Jedlik Anyos bejelentes utananezes                                                         ! TODO !
-batteryre nagyobb hangsuly                                                                 ! TODO !
-
-
-
+batteryre nagyobb hangsuly
 KEZDOLAP HELYETT:
-
-
-MOVASOL header KUKA
+felugro ablak/felso sav link/statikus ablak ami
+a jedlik programrol ir es linkel egy formkitoltore 
 
 
 struktura:
 
-about:
+
+rolunk:
 bemutatkozás/story (2018 solarpro ként, 1 bekezdés) - energy & operations egyutt, kozos dolgok
 mission statement
-vezetők - management kozos, utana bal, jobb oldal management és energy
-ALTERNATIVA
-nincs szetvalasztas, egy ceg
+vezetők - management, energy, operations (nincs szetvalasztas, egy ceg)
 minősítések - certif, quality management
 
 
-serivces:
-epc bal, om jobb
-epc: naperomu, halozati infrastruktura, energiatarolo, egyeb
-om: alallomas uzemeltetes, naperomu uzemeltetes, minositett gyartoi szakszerviz
-ALTRENATIVA
- gombok:
+szolgaltatasok:
+ gombok - 
  megujulo projektek - fejlesztese, muszaki penzugyi tanacsadas,
  generalkivitelezese, meresek es uzembehelyezes,
  uzemeltetese, gyartoi szakszerviz
 
 
-referenciak/projektek:
+projektek:
 3 ful: all, kivitelezes, uzemeltetes
 all ketteosztva bal-jobb                                                                  ! TODO !
-projektek nagy reszet athuzni solarprobol
+projektek nagy reszet athuzni solarprobol                                                 ! TODO !
+
+hirek:
+projekt kezdese, updatek, atadasa
 
 
-blog:
-NEWS oldal !
-
-
-contact:
+kapcsolat:
 telefon 1db kozos
 email 1 kozos
 google maps 
 adress
-2 db ajanlatkeres gomb kivitelezes, uzemeltetes
+2 db ajanlatkeres gomb kivitelezes, uzemeltetes                                           ! TODO !
 ezekre katt felugro form
 ami emailt kuld
 
