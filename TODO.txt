@@ -2,7 +2,9 @@ Google Business Profile szerkesztése: Ádám                                   
 
 
 email form esetén: adatkezelési tájékoztató, gdpr szabáéyok szerint                        ! TODO !
+php? vagy framework
 
+github/weboldal link a nevemnel
 
 Jedlik Anyos bejelentes utananezes                                                         ! TODO !
 batteryre nagyobb hangsuly
