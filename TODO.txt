@@ -1,28 +1,72 @@
-Add your company logos and any other images to the images/ folder.
-<img src="images/movasol-logo.png" alt="Movasol Logo">
+Google Business Profile szerkesztése: Ádám                                                 ! TODO !
 
-Work with your company or boss to get the actual content for each page (descriptions, mission statements, contact information, etc.) and update the pages accordingly.
 
-Adjust colors, fonts, and layouts in css/style.css to match the company’s branding (black, white, and green).
+email form esetén: adatkezelési tájékoztató, gdpr szabáéyok szerint                        ! TODO !
 
-Use media queries in your CSS to ensure the site looks good on different devices.
-@media (max-width: 768px) {
-  nav ul {
-    text-align: center;
-  }
-  
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-}
 
-Check the website on different browsers (Chrome, Firefox, Edge) to ensure consistency.
+Jedlik Anyos bejelentes utananezes                                                         ! TODO !
+batteryre nagyobb hangsuly
+KEZDOLAP HELYETT:
+felugro ablak/felso sav link/statikus ablak ami
+a jedlik programrol ir es linkel egy formkitoltore 
 
-If you plan to add a mobile menu, build out the JavaScript functionality and corresponding HTML elements (e.g., a hamburger icon with the ID menu-toggle).
 
-Implement any additional interactive features as needed.
+hatterkepek: szurkes arnyalat, kb 10 kep ami valtogat, sajat kepek (lehet solarpro s)
 
-Once the basic version is up, review it with your boss or colleagues to get feedback and identify improvements.
+struktura:
 
-Continuously update your content, design, and code based on feedback and testing.
+
+rolunk:
+bemutatkozás/story (2018 solarpro ként, 1 bekezdés) - energy & operations egyutt, kozos dolgok
+mission statement
+vezetők - management, energy, operations (nincs szetvalasztas, egy ceg)
+minősítések - certif, quality management
+
+
+szolgaltatasok:
+ gombok - 
+ megujulo projektek - fejlesztese, muszaki penzugyi tanacsadas,
+ generalkivitelezese, meresek es uzembehelyezes,
+ uzemeltetese, gyartoi szakszerviz
+
+
+projektek:
+3 ful: all, kivitelezes, uzemeltetes
+all ketteosztva bal-jobb                                                                  ! TODO !
+projektek nagy reszet athuzni solarprobol                                                 ! TODO !
+
+hirek:
+projekt kezdese, updatek, atadasa
+
+
+kapcsolat:
+telefon 1db kozos
+email 1 kozos
+google maps 
+adress
+2 db ajanlatkeres gomb kivitelezes, uzemeltetes                                           ! TODO !
+ezekre katt felugro form
+ami emailt kuld
+
+
+labjegyzet:
+social media, email, telefon, cimlinkek az aloldalakra
+
+
+
+minta:
+solarpro
+sts group
+
+segitseg:
+cpanel
+
+energy belul:
+napelem
+bess
+alallomas
+
+about us on belul:
+referenciak (elozo projektek)
+
+adam domain
