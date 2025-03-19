@@ -1,6 +1,8 @@
 email form esetén: adatkezelési tájékoztató, gdpr szabáéyok szerint                        ! TODO !
 php? vagy framework
 
+state of js, svelte, vite?, typescript (js helyett)
+
 Jedlik Anyos bejelentes utananezes                                                         ! TODO !
 batteryre nagyobb hangsuly
 KEZDOLAP HELYETT:
