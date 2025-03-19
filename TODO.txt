@@ -1,5 +1,7 @@
 Google Business Profile szerkesztése: Ádám                                                 ! TODO !
 
+f
+
 
 email form esetén: adatkezelési tájékoztató, gdpr szabáéyok szerint                        ! TODO !
 php? vagy framework
