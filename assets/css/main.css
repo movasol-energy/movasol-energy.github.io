@@ -59,7 +59,7 @@
   --heading-color: #ffffff;
   --surface-color: #252525;
   --contrast-color: #ffffff;
-  --nav-color: rgba(255, 255, 255, 0.55);
+  --nav-color: rgba(255, 255, 255, 0.75);
   --nav-hover-color: #ffffff;
   --nav-mobile-background-color: #252525;
   --nav-dropdown-background-color: #252525;
@@ -78,6 +78,7 @@
 body {
   color: var(--default-color);
   background-color: var(--background-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   font-family: var(--default-font);
 }
 
@@ -88,8 +89,7 @@ a {
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
-  text-decoration: none;
+  color: rgba(47, 173, 111, 0.75); /* Fallback for better support */
 }
 
 h1,
@@ -195,8 +195,8 @@ h6 {
 
 .lang-btn {
   background: transparent;
-  border: 2px solid #239C5B;
-  color: #239C5B;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
   padding: 6px 12px;
   font-weight: bold;
   cursor: pointer;
@@ -205,20 +205,23 @@ h6 {
 }
 
 .lang-btn:hover {
-  background: #239C5B;
+  background: var(--accent-color);
   color: #ffffff;
 }
 
+/* Active state */
 .lang-btn.active {
-  background: #67D98B;
+  background: var(--accent-color);
   color: #ffffff;
-  border-color: #67D98B;
+  border-color: var(--accent-color);
 }
 
+/* Inactive state */
 .lang-btn.inactive {
-  background: #239C5B;
-  color: #ffffff;
-  border-color: #239C5B;
+  background: transparent;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  opacity: 0.7;
 }
 
 
@@ -226,13 +229,20 @@ h6 {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
-/* Global Header on Scroll
-------------------------------*/
+/* Default Light Mode - When scrolled */
 .scrolled .header {
   --background-color: rgba(255, 255, 255, 0.95);
   --heading-color: #3c3c3c;
   --nav-color: #3c3c3c;
   --nav-hover-color: #3c3c3c;
+}
+
+/* Dark Mode - When scrolled */
+.dark-mode .scrolled .header {
+  --background-color: rgba(6, 6, 6, 0.95); /* Dark background */
+  --heading-color: #ffffff;
+  --nav-color: rgba(255, 255, 255, 0.75);
+  --nav-hover-color: #ffffff;
 }
 
 /*--------------------------------------------------------------
