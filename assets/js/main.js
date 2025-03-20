@@ -30,25 +30,43 @@ document.head.appendChild(script);
   document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.getElementById("theme-toggle");
     const body = document.body;
+    const header = document.querySelector(".header");
 
-    // Check local storage for saved theme
-    if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-mode");
-        toggleButton.innerHTML = '<i class="bi bi-sun"></i>'; // Set sun icon for dark mode
+    function applyTheme(theme) {
+        if (theme === "dark") {
+            body.classList.add("dark-theme");
+            header.classList.add("dark-theme");
+            toggleButton.innerHTML = '<i class="bi bi-sun"></i>';
+        } else {
+            body.classList.remove("dark-theme");
+            header.classList.remove("dark-theme");
+            toggleButton.innerHTML = '<i class="bi bi-moon"></i>';
+        }
     }
 
-    toggleButton.addEventListener("click", function () {
-        body.classList.toggle("dark-mode");
+    // Check local storage for saved theme
+    applyTheme(localStorage.getItem("theme") || "light");
 
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("theme", "dark");
-            toggleButton.innerHTML = '<i class="bi bi-sun"></i>'; // Change to sun icon
+    toggleButton.addEventListener("click", function () {
+        const newTheme = body.classList.contains("dark-theme") ? "light" : "dark";
+        localStorage.setItem("theme", newTheme);
+        applyTheme(newTheme);
+    });
+
+    // Detect scroll and apply the correct theme to the header
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+            document.body.classList.add("scrolled");
+            if (body.classList.contains("dark-theme")) {
+                header.classList.add("dark-theme"); // Ensure it stays dark
+            }
         } else {
-            localStorage.setItem("theme", "light");
-            toggleButton.innerHTML = '<i class="bi bi-moon"></i>'; // Change to moon icon
+            document.body.classList.remove("scrolled");
+            header.classList.remove("dark-theme");
         }
     });
   });
+
 
 
   /**

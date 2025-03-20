@@ -53,7 +53,7 @@
 }
 
 /* Dark Mode */
-.dark-mode {
+.dark-theme {
   --background-color: #060606;
   --default-color: #ffffff;
   --heading-color: #ffffff;
@@ -157,6 +157,7 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
+/* Default (Light) Theme */
 .header {
   --background-color: rgba(255, 255, 255, 0);
   --default-color: #ffffff;
@@ -187,6 +188,63 @@ h6 {
   font-family: var(--heading-font);
   color: var(--color-primary);
 }
+
+.dark-theme .header {
+  --background-color: #222;
+  --default-color: #ffffff;
+  --heading-color: #f8f8f8;
+  background-color: var(--background-color);
+  color: var(--default-color);
+}
+
+.dark-theme .header .logo h1 {
+  color: var(--heading-color);
+}
+
+.dark-theme .header .logo span {
+  color: var(--color-primary);
+}
+
+
+.theme-switcher {
+  display: flex;
+  gap: 10px;
+}
+
+.theme-btn {
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 6px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-btn:hover {
+  background: var(--accent-color);
+  color: #ffffff;
+}
+
+/* Active state */
+.theme-btn.active {
+  background: var(--accent-color);
+  color: #ffffff;
+  border-color: var(--accent-color);
+}
+
+/* Inactive state */
+.theme-btn.inactive {
+  background: transparent;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  opacity: 0.7;
+}
+
 
 .language-switcher {
   display: flex;
@@ -235,14 +293,18 @@ h6 {
   --heading-color: #3c3c3c;
   --nav-color: #3c3c3c;
   --nav-hover-color: #3c3c3c;
+  background-color: var(--background-color);
+  color: var(--heading-color);
 }
 
 /* Dark Mode - When scrolled */
-.dark-mode .scrolled .header {
-  --background-color: rgba(6, 6, 6, 0.95); /* Dark background */
+.dark-theme .scrolled .header {
+  --background-color: rgba(6, 6, 6, 0.95) !important;
   --heading-color: #ffffff;
   --nav-color: rgba(255, 255, 255, 0.75);
   --nav-hover-color: #ffffff;
+  background-color: var(--background-color) !important;
+  color: var(--heading-color) !important;
 }
 
 /*--------------------------------------------------------------
