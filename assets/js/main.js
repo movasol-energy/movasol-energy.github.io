@@ -27,6 +27,30 @@ document.head.appendChild(script);
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    // Check local storage for saved theme
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        toggleButton.innerHTML = '<i class="bi bi-sun"></i>'; // Set sun icon for dark mode
+    }
+
+    toggleButton.addEventListener("click", function () {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            toggleButton.innerHTML = '<i class="bi bi-sun"></i>'; // Change to sun icon
+        } else {
+            localStorage.setItem("theme", "light");
+            toggleButton.innerHTML = '<i class="bi bi-moon"></i>'; // Change to moon icon
+        }
+    });
+  });
+
+
   /**
    * Mobile nav toggle
    */

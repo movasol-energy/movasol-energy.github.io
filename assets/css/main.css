@@ -52,6 +52,21 @@
   --contrast-color: #ffffff;
 }
 
+/* Dark Mode */
+.dark-mode {
+  --background-color: #060606;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #252525;
+  --contrast-color: #ffffff;
+  --nav-color: rgba(255, 255, 255, 0.55);
+  --nav-hover-color: #ffffff;
+  --nav-mobile-background-color: #252525;
+  --nav-dropdown-background-color: #252525;
+  --nav-dropdown-color: #ffffff;
+  --nav-dropdown-hover-color: #2FAD6F;
+}
+
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
