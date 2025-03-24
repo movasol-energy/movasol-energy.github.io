@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 
 <head>
   <meta charset="utf-8">
@@ -39,7 +39,30 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const themeToggle = document.getElementById("theme-toggle");
+      const htmlElement = document.documentElement;
+      const currentTheme = localStorage.getItem("theme") || "light";
+  
+      function updateButtonText(theme) {
+          themeToggle.innerHTML = theme === "dark"
+              ? '<i class="bi bi-sun"></i> Light Mode'
+              : '<i class="bi bi-moon"></i> Dark Mode';
+      }
+  
+      // Apply saved theme
+      htmlElement.setAttribute("data-bs-theme", currentTheme);
+      updateButtonText(currentTheme);
+  
+      themeToggle.addEventListener("click", function () {
+          const newTheme = htmlElement.getAttribute("data-bs-theme") === "light" ? "dark" : "light";
+          htmlElement.setAttribute("data-bs-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+          updateButtonText(newTheme);
+      });
+  });
+</script>  
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">

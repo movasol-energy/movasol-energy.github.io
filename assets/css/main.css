@@ -37,36 +37,6 @@
   --nav-dropdown-hover-color: #2FAD6F; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
-.light-background {
-  --background-color: #f4f7f6;
-  --surface-color: #ffffff;
-}
-
-.dark-background {
-  --background-color: #060606;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #252525;
-  --contrast-color: #ffffff;
-}
-
-/* Dark Mode */
-.dark-theme {
-  --background-color: #060606;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #252525;
-  --contrast-color: #ffffff;
-  --nav-color: rgba(255, 255, 255, 0.75);
-  --nav-hover-color: #ffffff;
-  --nav-mobile-background-color: #252525;
-  --nav-dropdown-background-color: #252525;
-  --nav-dropdown-color: #ffffff;
-  --nav-dropdown-hover-color: #2FAD6F;
-}
-
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
@@ -157,9 +127,9 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
-/* Default (Light) Theme */
+
 .header {
-  --background-color: rgba(255, 255, 255, 0);
+  --background-color: #ffffff;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
@@ -179,7 +149,6 @@ h6 {
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
-  margin-left: 20px;
 }
 
 .header .logo span {
@@ -188,23 +157,6 @@ h6 {
   font-family: var(--heading-font);
   color: var(--color-primary);
 }
-
-.dark-theme .header {
-  --background-color: #222;
-  --default-color: #ffffff;
-  --heading-color: #f8f8f8;
-  background-color: var(--background-color);
-  color: var(--default-color);
-}
-
-.dark-theme .header .logo h1 {
-  color: var(--heading-color);
-}
-
-.dark-theme .header .logo span {
-  color: var(--color-primary);
-}
-
 
 .theme-switcher {
   display: flex;
@@ -227,13 +179,13 @@ h6 {
 
 .theme-btn:hover {
   background: var(--accent-color);
-  color: #ffffff;
+  color: var(--background-color);
 }
 
 /* Active state */
 .theme-btn.active {
   background: var(--accent-color);
-  color: #ffffff;
+  color: var(--background-color);
   border-color: var(--accent-color);
 }
 
@@ -264,13 +216,13 @@ h6 {
 
 .lang-btn:hover {
   background: var(--accent-color);
-  color: #ffffff;
+  color: var(--background-color);
 }
 
 /* Active state */
 .lang-btn.active {
   background: var(--accent-color);
-  color: #ffffff;
+  color: var(--background-color);
   border-color: var(--accent-color);
 }
 
@@ -285,26 +237,8 @@ h6 {
 
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-}
-
-/* Default Light Mode - When scrolled */
-.scrolled .header {
-  --background-color: rgba(255, 255, 255, 0.95);
-  --heading-color: #3c3c3c;
-  --nav-color: #3c3c3c;
-  --nav-hover-color: #3c3c3c;
   background-color: var(--background-color);
   color: var(--heading-color);
-}
-
-/* Dark Mode - When scrolled */
-.dark-theme .scrolled .header {
-  --background-color: rgba(6, 6, 6, 0.95) !important;
-  --heading-color: #ffffff;
-  --nav-color: rgba(255, 255, 255, 0.75);
-  --nav-hover-color: #ffffff;
-  background-color: var(--background-color) !important;
-  color: var(--heading-color) !important;
 }
 
 /*--------------------------------------------------------------
@@ -339,7 +273,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: var(--nav-dropdown-color);
     font-size: 14px;
     padding: 0 2px;
     font-family: var(--nav-font);
@@ -383,7 +317,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: var(--nav-dropdown-color);
   }
 
   .navmenu .dropdown ul {
@@ -548,7 +482,7 @@ h6 {
   }
 
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
+    color: var(--background-color);
     position: absolute;
     font-size: 32px;
     top: 15px;
@@ -912,6 +846,7 @@ section,
 }
 
 .hero .info h2 {
+  color: #ffffff;
   margin-bottom: 30px;
   padding-bottom: 30px;
   font-size: 56px;
@@ -920,6 +855,7 @@ section,
 }
 
 .hero .info h2:after {
+  color: var(--background-color);
   content: "";
   position: absolute;
   display: block;
@@ -939,7 +875,7 @@ section,
 }
 
 .hero .info p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--background-color), transparent 20%);
   font-size: 18px;
 }
 
@@ -989,7 +925,7 @@ section,
 
 .hero .carousel-item::before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 30%);
+  background-color: color-mix(in srgb, var(--heading-color), transparent 30%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1497,7 +1433,7 @@ section,
   font-size: 14px;
   padding: 5px 10px;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--background-color);
   display: inline-block;
   background-color: var(--accent-color);
 }
@@ -1520,7 +1456,7 @@ section,
   left: calc(50% - 40px);
   font-size: 26px;
   top: calc(50% - 14px);
-  color: #fff;
+  color: var(--background-color);
   transition: 0.3s;
   line-height: 1.2;
 }
@@ -1542,125 +1478,6 @@ section,
 
 .projects .portfolio-content:hover img {
   transform: scale(1.1);
-}
-
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
-.testimonials .testimonial-wrap {
-  padding-left: 50px;
-}
-
-.testimonials .testimonials-carousel,
-.testimonials .testimonials-slider {
-  overflow: hidden;
-}
-
-.testimonials .testimonial-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  box-sizing: content-box;
-  padding: 30px 30px 30px 60px;
-  margin: 30px 15px;
-  min-height: 200px;
-  position: relative;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 10px;
-  border: 6px solid var(--background-color);
-  position: absolute;
-  left: -45px;
-}
-
-.testimonials .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
-}
-
-.testimonials .testimonial-item h4 {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 14px;
-  margin: 0;
-}
-
-.testimonials .testimonial-item .stars {
-  margin: 10px 0;
-}
-
-.testimonials .testimonial-item .stars i {
-  color: #ffc107;
-  margin: 0 1px;
-}
-
-.testimonials .testimonial-item .quote-icon-left,
-.testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--accent-color), transparent 60%);
-  font-size: 26px;
-  line-height: 0;
-}
-
-.testimonials .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
-}
-
-.testimonials .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-  transform: scale(-1, -1);
-}
-
-.testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 15px auto 15px auto;
-}
-
-.testimonials .swiper-wrapper {
-  height: auto;
-}
-
-.testimonials .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: var(--background-color);
-  opacity: 1;
-  border: 1px solid var(--accent-color);
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-
-@media (max-width: 767px) {
-  .testimonials .testimonial-wrap {
-    padding-left: 0;
-  }
-
-  .testimonials .testimonials-carousel,
-  .testimonials .testimonials-slider {
-    overflow: hidden;
-  }
-
-  .testimonials .testimonial-item {
-    padding: 30px;
-    margin: 15px;
-  }
-
-  .testimonials .testimonial-item .testimonial-img {
-    position: static;
-    left: auto;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -2235,7 +2052,7 @@ section,
 
 .project-details .portfolio-description .testimonial-item h4 {
   font-size: 14px;
-  color: #6c757d;
+  color: var(--heading-color);
   margin: 0;
 }
 
