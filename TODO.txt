@@ -1,4 +1,4 @@
-email form esetén: adatkezelési tájékoztató, gdpr szabáéyok szerint                        ! TODO !
+email form esetén: adatkezelési tájékoztató, gdpr szabályok szerint                        ! TODO !
 php? vagy framework
 
 state of js, svelte, vite?, typescript (js helyett)
