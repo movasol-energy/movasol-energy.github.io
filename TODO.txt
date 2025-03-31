@@ -1,55 +1,46 @@
-email form esetén: adatkezelési tájékoztató, gdpr szabályok szerint                        ! TODO !
+email form esetén: adatkezelési tájékoztató, gdpr szabályok szerint
 php? vagy framework
 
 state of js, svelte, vite?, typescript (js helyett)
 
-Jedlik Anyos bejelentes utananezes                                                         ! TODO !
+Jedlik Anyos bejelentes utananezes
 batteryre nagyobb hangsuly
 KEZDOLAP HELYETT:
 felugro ablak/felso sav link/statikus ablak ami
 a jedlik programrol ir es linkel egy formkitoltore 
 
 
-hatterkepek: szurkes arnyalat, kb 10 kep ami valtogat, sajat kepek (lehet solarpro s)
+hatterkepek:
+szurkes arnyalat, kb 10 kep ami valtogat, sajat kepek (lehet solarpro s)
+
 
 struktura:
 
 
 rolunk:
-bemutatkozás/story (2018 solarpro ként, 1 bekezdés) - energy & operations egyutt, kozos dolgok
-mission statement
-vezetők - management, energy, operations (nincs szetvalasztas, egy ceg)
-minősítések - certif, quality management
 
 
 szolgaltatasok:
- gombok - 
- megujulo projektek - fejlesztese, muszaki penzugyi tanacsadas,
- generalkivitelezese, meresek es uzembehelyezes,
- uzemeltetese, gyartoi szakszerviz
 
 
 projektek:
 3 ful: all, kivitelezes, uzemeltetes
-all ketteosztva bal-jobb                                                                  ! TODO !
-projektek nagy reszet athuzni solarprobol                                                 ! TODO !
+all ketteosztva bal-jobb
+projektek nagy reszet athuzni solarprobol
+
 
 hirek:
 projekt kezdese, updatek, atadasa
 
 
 kapcsolat:
-telefon 1db kozos
-email 1 kozos
-google maps 
-adress
-2 db ajanlatkeres gomb kivitelezes, uzemeltetes                                           ! TODO !
+2 db ajanlatkeres gomb kivitelezes, uzemeltetes
 ezekre katt felugro form
 ami emailt kuld
 
 
 labjegyzet:
-social media, email, telefon, cimlinkek az aloldalakra
+
 
 
 
@@ -59,13 +50,5 @@ sts group
 
 segitseg:
 cpanel
-
-energy belul:
-napelem
-bess
-alallomas
-
-about us on belul:
-referenciak (elozo projektek)
 
 adam domain
