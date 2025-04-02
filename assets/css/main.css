@@ -821,7 +821,7 @@ section,
   font-size: 18px;
 }
 
-.hero .info .btn-get-started {
+.hero .round-button {
   color: var(--contrast-color);
   font-family: var(--heading-font);
   font-weight: 500;
@@ -835,8 +835,9 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-.hero .info .btn-get-started:hover {
+.hero .round-button:hover {
   background: var(--accent-color);
+  color: var(--contrast-color);
 }
 
 .hero .carousel {
@@ -1428,6 +1429,24 @@ section,
   opacity: 1;
 }
 
+.projects .round-button {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.4s;
+  margin: 10px;
+  border: 2px solid var(--accent-color);
+}
+
+.projects .round-button:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
 
 /*--------------------------------------------------------------
 # Recent Blog Posts Section
@@ -2522,7 +2541,23 @@ section,
   font-size: 14px;
 }
 
-.contact .php-email-form {
+.contact .inner-title {
+
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin: 30px 0;
+  text-align: right;
+}
+
+@media (min-width: 991px) {
+  .contact .inner-title {
+    max-width: 65%;
+    margin: 0 0 80px 0;
+    text-align: right;
+  }
+}
+
+/*.contact .php-email-form {
   background-color: var(--surface-color);
   height: 100%;
   padding: 30px;
@@ -2570,7 +2605,7 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
+}*/
 
 /*--------------------------------------------------------------
 # Starter Section Section
