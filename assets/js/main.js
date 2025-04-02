@@ -30,43 +30,108 @@ document.head.appendChild(script);
   document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.getElementById("theme-toggle");
     const body = document.body;
+    // Ensure your header has the class "header" or update this selector
     const header = document.querySelector(".header");
 
-    function applyTheme(theme) {
+    // Function to apply theme classes consistently
+    function applyThemeClasses(theme) {
         if (theme === "dark") {
             body.classList.add("dark-theme");
-            header.classList.add("dark-theme");
-            toggleButton.innerHTML = '<i class="bi bi-sun"></i>';
+            // Only add class to header if header element exists
+            if (header) header.classList.add("dark-theme");
+            // Update button icon (ensure you have Bootstrap Icons CSS included)
+            if (toggleButton) toggleButton.innerHTML = '<i class="bi bi-sun"></i>';
+            if (toggleButton) toggleButton.setAttribute('aria-pressed', 'true');
         } else {
             body.classList.remove("dark-theme");
-            header.classList.remove("dark-theme");
-            toggleButton.innerHTML = '<i class="bi bi-moon"></i>';
+            // Only remove class from header if header element exists
+            if (header) header.classList.remove("dark-theme");
+            // Update button icon
+            if (toggleButton) toggleButton.innerHTML = '<i class="bi bi-moon"></i>';
+             if (toggleButton) toggleButton.setAttribute('aria-pressed', 'false');
         }
     }
 
-    // Check local storage for saved theme
-    applyTheme(localStorage.getItem("theme") || "light");
+    // Function to set theme, apply classes, and save preference
+    function setTheme(theme) {
+        applyThemeClasses(theme);
+        localStorage.setItem("theme", theme);
+    }
 
-    toggleButton.addEventListener("click", function () {
-        const newTheme = body.classList.contains("dark-theme") ? "light" : "dark";
-        localStorage.setItem("theme", newTheme);
-        applyTheme(newTheme);
-    });
+    // --- Initial Theme Determination ---
+    let initialTheme = localStorage.getItem("theme"); // Check storage first
 
-    // Detect scroll and apply the correct theme to the header
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 50) {
-            document.body.classList.add("scrolled");
-            if (body.classList.contains("dark-theme")) {
-                header.classList.add("dark-theme"); // Ensure it stays dark
-            }
+    if (!initialTheme) { // If no theme saved in storage...
+        // Check system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialTheme = "dark";
         } else {
-            document.body.classList.remove("scrolled");
-            header.classList.remove("dark-theme");
+            initialTheme = "light"; // Default to light
         }
-    });
-  });
+        // Note: We don't save the system preference to localStorage here,
+        // allowing it to adapt if the system setting changes later (unless toggled manually).
+    }
 
+    // Apply the determined theme (either from storage or system preference)
+    applyThemeClasses(initialTheme);
+     // Set initial aria state based on the applied theme
+    if (toggleButton) {
+        toggleButton.setAttribute('aria-pressed', initialTheme === 'dark' ? 'true' : 'false');
+    }
+
+
+    // --- Toggle Button Logic ---
+    if (toggleButton) {
+        toggleButton.addEventListener("click", function () {
+            // Determine new theme based on *current* body class
+            const newTheme = body.classList.contains("dark-theme") ? "light" : "dark";
+            // Set and save the *manual* preference
+            setTheme(newTheme);
+        });
+    }
+
+    // --- Scroll Logic --- (Corrected)
+    // This function ONLY handles adding/removing the 'scrolled' class
+    function handleScroll() {
+        // Check if the header element actually exists
+        if (!header) {
+            return; // Exit if no header found
+        }
+        // Add/remove 'scrolled' class based on scroll position
+        if (window.scrollY > 50) { // Adjust 50px threshold if needed
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+        // The header will *automatically* have the correct theme styles
+        // applied via CSS because it will have (or not have) the .dark-theme class
+        // managed independently by applyThemeClasses().
+    }
+
+    // Add scroll listener ONLY if the header element exists
+    if (header) {
+        window.addEventListener("scroll", handleScroll);
+        // Run once on load to set initial scrolled state correctly
+        handleScroll();
+    }
+
+     // --- Optional: Listen for system preference changes ---
+     // This is useful if the user hasn't manually set a theme yet
+    if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            // Only react if there's NO manually saved theme preference
+            if (!localStorage.getItem('theme')) {
+                const newSystemTheme = event.matches ? 'dark' : 'light';
+                applyThemeClasses(newSystemTheme); // Apply but don't save to storage
+                 // Update aria state if button exists
+                 if (toggleButton) {
+                    toggleButton.setAttribute('aria-pressed', newSystemTheme === 'dark' ? 'true' : 'false');
+                }
+            }
+        });
+    }
+
+  });
 
 
   /**

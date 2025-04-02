@@ -17,12 +17,12 @@
   --nav-font: "Poppins",  sans-serif;
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-  --background-color: #f0f0f0; /* Background color for the entire website, including individual sections */
+  --background-color: #333333; /* Background color for the entire website, including individual sections */
   --default-color: #364d59; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #333333; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #2FAD6F; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #f0f0f0cb; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #f0f0f0cb; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --contrast-color: #f0f0f0; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
   --nav-color: rgba(255, 255, 255, 0.55);  /* The default color of the main navmenu links */
@@ -67,7 +67,7 @@ h6 {
 }
 
 /* PHP Email Form Messages
-------------------------------*/
+------------------------------
 .php-email-form .error-message {
   display: none;
   background: #df1529;
@@ -117,14 +117,14 @@ h6 {
     transform: rotate(360deg);
   }
 }
-
+*/
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
 
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--contrast-color);
   padding: 20px 0;
   transition: all 0.4s;
   z-index: 997;
@@ -228,7 +228,7 @@ h6 {
 
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-  background-color: var(--background-color);
+  background-color: var(--contrast-color);
   color: var(--heading-color);
 }
 
@@ -390,25 +390,6 @@ h6 {
     background-color: var(--accent-color);
     color: var(--contrast-color);
     transform: rotate(180deg);
-  }
-
-  .navmenu .dropdown ul {
-    position: static;
-    display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    transition: all 0.4s ease-in-out;
-  }
-
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
   }
 
   .mobile-nav-active {
@@ -817,7 +798,7 @@ section,
 }
 
 .hero .info p {
-  color: color-mix(in srgb, var(--background-color), transparent 20%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 20%);
   font-size: 18px;
 }
 
@@ -1155,6 +1136,7 @@ section,
 }
 
 .alt-services h3 {
+  color: var(--contrast-color);
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -1205,7 +1187,7 @@ section,
 }
 
 .alt-services .icon-box h4 a {
-  color: var(--heading-color);
+  color: var(--contrast-color);
   transition: 0.2s;
 }
 
@@ -1214,6 +1196,7 @@ section,
 }
 
 .alt-services .icon-box p {
+  color: var(--contrast-color);
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
@@ -1430,7 +1413,7 @@ section,
 }
 
 .projects .round-button {
-  color: var(--heading-color);
+  color: var(--contrast-color);
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 16px;
