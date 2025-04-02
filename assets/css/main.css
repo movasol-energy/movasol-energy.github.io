@@ -2511,6 +2511,9 @@ section,
   background-color: var(--surface-color);
   padding: 20px 0 30px 0;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  /* Ensure text is centered if needed, though flex classes handle this */
+  text-align: center;
+  height: 100%; /* Optional: Makes info items in the same row equal height */
 }
 
 .contact .info-item i {
@@ -2526,13 +2529,13 @@ section,
   transition: all 0.2s ease-in-out;
   border-radius: 50%;
   border: 2px dotted color-mix(in srgb, var(--accent-color), transparent 40%);
+  margin-bottom: 15px; /* Added margin below icon */
 }
 
 .contact .info-item h3 {
-  font-size: 20px;
-  font-size: 18px;
+  font-size: 18px; /* Reduced one declaration */
   font-weight: 700;
-  margin: 10px 0;
+  margin: 0 0 5px 0; /* Adjusted margin */
 }
 
 .contact .info-item p {
@@ -2541,20 +2544,18 @@ section,
   font-size: 14px;
 }
 
-.contact .inner-title {
-
-  font-size: 4rem;
-  font-weight: 700;
-  margin:  0 0 0 650px;
-  text-align: left;
-}
-
+/* Media query is less critical now but kept for potential adjustments */
 @media (min-width: 991px) {
-  .contact .inner-title {
-    max-width: 100%;
-    margin:  0 0 0 650px;
-    text-align: left;
+  /* Ensure map height is appropriate on large screens if needed */
+  .contact .col-lg-6 iframe {
+     /* You might want to adjust height based on the info items height */
+     /* Example: min-height: 500px; */
   }
+}
+/* Make sure map is responsive */
+.contact iframe {
+  max-width: 100%;
+  margin-top: 50px;
 }
 
 /*.contact .php-email-form {
