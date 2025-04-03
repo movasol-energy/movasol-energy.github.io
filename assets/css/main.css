@@ -2553,10 +2553,60 @@ section,
      /* Example: min-height: 500px; */
   }
 }
+
+.contact .section-title {
+  text-align: center;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.contact .section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+  margin-top: 0px;
+}
+
+.contact .section-title h2:before,
+.contact .section-title h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: var(--accent-color);
+  display: inline-block;
+}
+
+.contact .section-title h2:before {
+  margin: 0 15px 10px 0;
+}
+
+.contact .section-title h2:after {
+  margin: 0 0 10px 15px;
+}
+
+.contact .round-button {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.4s;
+  margin: 10px;
+  margin-bottom: 30px;
+  border: 2px solid var(--accent-color);
+}
+
+.contact .round-button:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
 /* Make sure map is responsive */
 .contact iframe {
   max-width: 100%;
-  margin-top: 50px;
 }
 
 /*.contact .php-email-form {
