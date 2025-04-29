@@ -1,25 +1,40 @@
-function setLanguage(lang) {
-    document.getElementById("btn-hu").classList.remove("active", "inactive");
-    document.getElementById("btn-en").classList.remove("active", "inactive");
-  
-    if (lang === "hu") {
-      document.getElementById("btn-hu").classList.add("active");
-      document.getElementById("btn-en").classList.add("inactive");
-    } else {
-      document.getElementById("btn-en").classList.add("active");
-      document.getElementById("btn-hu").classList.add("inactive");
-    }
-  }  
+(function() {
+  const STORAGE_KEY = 'language';
+  const DEFAULT_LANG = 'hu';
 
-function loadLanguage() {
-    let lang = localStorage.getItem('language') || 'hu'; // Default to Hungarian
+  window.setLanguage = applyLanguage;
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const lang = localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG;
+    applyLanguage(lang);
+  });
+
+  function applyLanguage(lang) {
+    localStorage.setItem(STORAGE_KEY, lang);
+
     fetch(`assets/lang/${lang}.json`)
-        .then(response => response.json())
-        .then(data => {
-            document.querySelectorAll("[data-translate]").forEach(el => {
-                el.innerHTML = data[el.getAttribute("data-translate")];
-            });
-        });
-}
+      .then(res => res.json())
+      .then(data => document.querySelectorAll('[data-translate]')
+        .forEach(el => {
+          const key = el.dataset.translate;
+          if (data[key] != null) el.textContent = data[key];
+        })
+      )
+      .catch(err => console.error('Language JSON load failed:', err));
 
-document.addEventListener("DOMContentLoaded", loadLanguage);
+    document.documentElement.setAttribute('lang', lang);
+
+    updateSwitcher(lang);
+  }
+
+  function updateSwitcher(lang) {
+    const btnHu = document.getElementById('btn-hu');
+    const btnEn = document.getElementById('btn-en');
+    if (!btnHu || !btnEn) return;
+
+    btnHu.classList.toggle('active',   lang === 'hu');
+    btnHu.classList.toggle('inactive', lang !== 'hu');
+    btnEn.classList.toggle('active',   lang === 'en');
+    btnEn.classList.toggle('inactive', lang !== 'en');
+  }
+})();

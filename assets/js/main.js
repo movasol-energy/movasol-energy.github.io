@@ -6,11 +6,6 @@
 * License: https://bootstrapmade.com/license/
 */
 
-const script = document.createElement("script");
-script.src = "assets/js/language.js";
-document.head.appendChild(script);
-
-
 (function() {
   "use strict";
 

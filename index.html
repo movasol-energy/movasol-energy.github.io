@@ -31,6 +31,10 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <script src="assets/js/language.js" defer></script>
+  <script src="assets/js/theme.js"     defer></script>
+  <script src="assets/js/main.js"      defer></script>
+</head>
   <!-- =======================================================
   * Template Name: Movasol
   * Template URL: https://bootstrapmade.com/Movasol-bootstrap-construction-website-template/
@@ -38,31 +42,6 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-</head>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-      const themeToggle = document.getElementById("theme-toggle");
-      const htmlElement = document.documentElement;
-      const currentTheme = localStorage.getItem("theme") || "light";
-  
-      function updateButtonText(theme) {
-          themeToggle.innerHTML = theme === "dark"
-              ? '<i class="bi bi-sun"></i> Light Mode'
-              : '<i class="bi bi-moon"></i> Dark Mode';
-      }
-  
-      // Apply saved theme
-      htmlElement.setAttribute("data-bs-theme", currentTheme);
-      updateButtonText(currentTheme);
-  
-      themeToggle.addEventListener("click", function () {
-          const newTheme = htmlElement.getAttribute("data-bs-theme") === "light" ? "dark" : "light";
-          htmlElement.setAttribute("data-bs-theme", newTheme);
-          localStorage.setItem("theme", newTheme);
-          updateButtonText(newTheme);
-      });
-  });
-</script>  
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
