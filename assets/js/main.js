@@ -139,4 +139,16 @@
     new PureCounter();
   }
 
+  /**
+   * 11 Active highlights
+   */
+  document.addEventListener('DOMContentLoaded', () => {
+    const path = location.pathname;            // e.g. "/hu/rolunk.html"
+    document.querySelectorAll('#navmenu a').forEach(a => {
+      if (a.getAttribute('href') === path) {
+        a.classList.add('active');
+      }
+    });
+  });
+
 })();
