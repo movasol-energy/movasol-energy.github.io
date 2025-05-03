@@ -20,9 +20,9 @@ def render_template(subdir, filename):
     with open(os.path.join(output_path, filename), "w", encoding="utf-8") as f:
         f.write(rendered)
 
-# List of pages to render (relative to templates/)
+# List of pages to render (relative to/templates/)
 pages = [
-    ("en", "/index.html"),
+    ("en", "index.html"),
     ("en", "about.html"),
     ("en", "contact.html"),
     ("en", "news-details.html"),
@@ -36,7 +36,7 @@ pages = [
     ("en", "services-measurement.html"),
     ("en", "services-operations.html"),
     ("en", "services.html"),
-    ("hu", "/index.html"),
+    ("hu", "index.html"),
     ("hu", "hirek.html"),
     ("hu", "hirek-details.html"),
     ("hu", "kapcsolat.html"),
@@ -55,4 +55,4 @@ pages = [
 for subdir, filename in pages:
     render_template(subdir, filename)
 
-print("Static site generation complete.")
+print("OK!")

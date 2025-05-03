@@ -12,7 +12,7 @@
   function applyLanguage(lang) {
     localStorage.setItem(STORAGE_KEY, lang);
 
-    fetch(`assets/lang/${lang}.json`)
+    fetch(`"/assets/lang/${lang}.json`)
       .then(res => res.json())
       .then(data => document.querySelectorAll('[data-translate]')
         .forEach(el => {
