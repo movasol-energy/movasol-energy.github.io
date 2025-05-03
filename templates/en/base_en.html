@@ -61,7 +61,7 @@
   
     <!-- page-specific content -->
     <main>
-      {{ content }}
+      {% block content %}{% endblock %}
     </main>
   
     {% include "en/footer_en.html" %}

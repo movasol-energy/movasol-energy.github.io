@@ -2,7 +2,21 @@
   const STORAGE_KEY = 'language';
   const DEFAULT_LANG = 'hu';
 
-  window.setLanguage = applyLanguage;
+  window.setLanguage = function(lang) {
+    const path = window.location.pathname;
+  
+    // Detect current language and filename
+    const parts = path.split('/');
+    const currentLang = parts[parts.length - 2]; // 'en' or 'hu'
+    const filename = parts[parts.length - 1];    // e.g., 'index.html'
+  
+    // Redirect to the same file in the target language folder
+    const newUrl = path.replace(`/${currentLang}/`, `/${lang}/`);
+    window.location.href = newUrl;
+  
+    // Optional: store preference
+    localStorage.setItem('language', lang);
+  };
 
   document.addEventListener('DOMContentLoaded', () => {
     const lang = localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG;
