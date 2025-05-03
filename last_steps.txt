@@ -1,10 +1,3 @@
-Add your company logos and any other images to the images/ folder.
-<img src="images/movasol-logo.png" alt="Movasol Logo">
-
-Work with your company or boss to get the actual content for each page (descriptions, mission statements, contact information, etc.) and update the pages accordingly.
-
-Adjust colors, fonts, and layouts in css/style.css to match the company’s branding (black, white, and green).
-
 Use media queries in your CSS to ensure the site looks good on different devices.
 @media (max-width: 768px) {
   nav ul {
@@ -20,8 +13,6 @@ Use media queries in your CSS to ensure the site looks good on different devices
 Check the website on different browsers (Chrome, Firefox, Edge) to ensure consistency.
 
 If you plan to add a mobile menu, build out the JavaScript functionality and corresponding HTML elements (e.g., a hamburger icon with the ID menu-toggle).
-
-Implement any additional interactive features as needed.
 
 Once the basic version is up, review it with your boss or colleagues to get feedback and identify improvements.
 
