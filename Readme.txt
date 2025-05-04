@@ -1,1 +1,1 @@
-Movasol
+Movasol Energy Zrt. és Movasol Operations Zrt. weboldala
