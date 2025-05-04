@@ -5,7 +5,6 @@
   window.setLanguage = function(lang) {
     const path = window.location.pathname;
   
-    // Detect current language and filename
     const parts = path.split('/');
     const currentLang = parts[parts.length - 2]; // 'en' or 'hu'
     const filename = parts[parts.length - 1];    // e.g., 'index.html'
