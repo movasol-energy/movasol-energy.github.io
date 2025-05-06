@@ -143,7 +143,7 @@
    * 11 Active highlights
    */
   document.addEventListener('DOMContentLoaded', () => {
-    const path = location.pathname;            // e.g. "/hu/rolunk.html"
+    const path = location.pathname;            // e.g. "/hu/rolunk"
     document.querySelectorAll('#navmenu a').forEach(a => {
       if (a.getAttribute('href') === path) {
         a.classList.add('active');
