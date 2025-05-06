@@ -7,7 +7,6 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 OUTPUT_DIR   = os.path.join(BASE_DIR, "output")
 # ────────────────────────────────────────────────────────────────────────────
 
-# Dual‐path loader: common templates first, then full tree
 env = Environment(
     loader=FileSystemLoader([
         os.path.join(TEMPLATE_DIR, "common"),
@@ -34,18 +33,18 @@ def render_all():
     print(f"[DEBUG] Found {len(pages)} page templates on disk.")
     
     for rel_dir, fname in pages:
-        # source path
-        src = os.path.join(TEMPLATE_DIR, rel_dir, fname)
-        # derive output path
         slug = os.path.splitext(fname)[0]
-        if rel_dir == "hu" and fname == "index.html":
-            dest_dir, dest_name = OUTPUT_DIR, "index.html"
-        else:
-            dest_dir = os.path.join(OUTPUT_DIR, rel_dir, slug)
+        
+        # Output directory logic
+        if slug == "index":
+            dest_dir = os.path.join(OUTPUT_DIR, rel_dir)  # .../en/
             dest_name = "index.html"
+        else:
+            dest_dir = os.path.join(OUTPUT_DIR, rel_dir, slug)  # .../en/about/
+            dest_name = "index.html"
+
         os.makedirs(dest_dir, exist_ok=True)
         
-        # load+render via Jinja’s loader
         tpl_path = f"{rel_dir}/{fname}" if rel_dir != "." else fname
         try:
             rendered = env.get_template(tpl_path).render()
@@ -57,7 +56,6 @@ def render_all():
         try:
             with open(out_path, "w", encoding="utf-8") as fp:
                 fp.write(rendered)
-            print(f"[INFO] Built ➔ {out_path}")
         except Exception as e:
             print(f"[ERROR] Writing {out_path}: {e}")
     
