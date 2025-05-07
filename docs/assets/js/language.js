@@ -23,6 +23,24 @@
     Object.entries(huToEn).map(([hu, en]) => [en, hu])
   );
 
+  // update the .active / .inactive classes on the two buttons
+  function updateButtonState(lang) {
+    const btnHu = document.getElementById('btn-hu');
+    const btnEn = document.getElementById('btn-en');
+
+    if (lang === 'hu') {
+      btnHu.classList.add('active');
+      btnHu.classList.remove('inactive');
+      btnEn.classList.add('inactive');
+      btnEn.classList.remove('active');
+    } else {
+      btnEn.classList.add('active');
+      btnEn.classList.remove('inactive');
+      btnHu.classList.add('inactive');
+      btnHu.classList.remove('active');
+    }
+  }
+
   window.setLanguage = function (targetLang) {
     console.log('[router] setLanguage →', targetLang);
 
@@ -37,12 +55,16 @@
       : null;
 
     const newSlug = map && map[currentSlug] ? map[currentSlug] : 'index';
-
-    const newPath = (newSlug === 'index') 
-      ? `/${targetLang}/` 
+    const newPath = (newSlug === 'index')
+      ? `/${targetLang}/`
       : `/${targetLang}/${newSlug}/`;
 
     localStorage.setItem(STORAGE_KEY, targetLang);
+
+    // pre-switch the button state for immediate feedback
+    updateButtonState(targetLang);
+
+    // then navigate
     window.location.href = newPath;
   };
 
@@ -53,6 +75,10 @@
     // If root or mismatched, bounce into savedLang's index.html
     if (!SUPPORTED_LANGS.includes(urlLang) || savedLang !== urlLang) {
       window.setLanguage(savedLang);
+      return;  // page is navigating away
     }
+
+    // otherwise, set button state according to the active language
+    updateButtonState(urlLang);
   });
 })();
