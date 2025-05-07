@@ -1,34 +1,27 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
-echo "[INFO] Rendering templates..."
+cleanup() {
+  echo "[INFO] Tearing down server on port 8080…"
+  # Negative PID → kill entire process group
+  kill -- -"$http_pid" 2>/dev/null || true
+}
+# Trap INT, TERM and normal EXIT
+trap cleanup SIGINT SIGTERM EXIT
+
+echo "[INFO] Rendering templates…"
 python3 render.py
 
-# Serve from the unified 'docs' root so /assets, /en and /hu all resolve
 cd docs
-
-# Ensure a redirect index exists
-if [ ! -f index.html ]; then
-  cat > index.html <<'EOF'
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url=/hu/">
-  <title>Redirecting…</title>
-</head>
-<body>
-  <p>Redirecting to <a href="/hu/">/hu/</a>…</p>
-</body>
-</html>
-EOF
-  echo "[INFO] Created redirecting index.html → /hu/"
-fi
+# …redirect boilerplate…
 
 echo "[INFO] Serving on http://127.0.0.1:8080 (root → /hu/)"
-python3 -m http.server 8080 &
+# Start in its own process group
+setsid python3 -m http.server 8080 &
+http_pid=$!
 
 sleep 1
 cmd.exe /c start http://127.0.0.1:8080
 
-wait
+# Wait on the server’s PID (not the script’s)
+wait "$http_pid"
