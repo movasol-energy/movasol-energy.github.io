@@ -4,7 +4,7 @@ from jinja2 import Environment, FileSystemLoader
 # ─── CONFIG ────────────────────────────────────────────────────────────────
 BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
-OUTPUT_DIR   = os.path.join(BASE_DIR, "output")
+OUTPUT_DIR   = os.path.join(BASE_DIR, "docs")
 # ────────────────────────────────────────────────────────────────────────────
 
 env = Environment(

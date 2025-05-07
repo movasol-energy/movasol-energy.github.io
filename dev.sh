@@ -4,8 +4,8 @@ set -e
 echo "[INFO] Rendering templates..."
 python3 render.py
 
-# Serve from the unified 'output' root so /assets, /en and /hu all resolve
-cd output
+# Serve from the unified 'docs' root so /assets, /en and /hu all resolve
+cd docs
 
 # Ensure a redirect index exists
 if [ ! -f index.html ]; then
