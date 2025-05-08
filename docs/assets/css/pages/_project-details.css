@@ -1,0 +1,129 @@
+/*--------------------------------------------------------------
+# Project Details Section
+--------------------------------------------------------------*/
+.project-details .portfolio-details-slider img {
+    width: 100%;
+  }
+  
+  .project-details .swiper-wrapper {
+    height: auto;
+  }
+  
+  .project-details .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .project-details .swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+    opacity: 1;
+  }
+  
+  .project-details .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--accent-color);
+  }
+  
+  .project-details .portfolio-info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  
+  .project-details .portfolio-info h3:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+    left: 0;
+    bottom: 0;
+  }
+  
+  .project-details .portfolio-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+  }
+  
+  .project-details .portfolio-info ul li {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+  }
+  
+  .project-details .portfolio-info ul strong {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: color-mix(in srgb, var(--default-color), transparent 50%);
+    font-size: 14px;
+  }
+  
+  .project-details .portfolio-description h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .project-details .portfolio-description p {
+    padding: 0;
+  }
+  
+  .project-details .portfolio-description .testimonial-item {
+    padding: 30px 30px 0 30px;
+    position: relative;
+    background: color-mix(in srgb, var(--default-color), transparent 97%);
+    margin-bottom: 50px;
+  }
+  
+  .project-details .portfolio-description .testimonial-item .testimonial-img {
+    width: 90px;
+    border-radius: 4px;
+    border: 6px solid var(--background-color);
+    float: left;
+    margin: 0 10px 0 0;
+  }
+  
+  .project-details .portfolio-description .testimonial-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+    padding-top: 20px;
+  }
+  
+  .project-details .portfolio-description .testimonial-item h4 {
+    font-size: 14px;
+    color: var(--heading-color);
+    margin: 0;
+  }
+  
+  .project-details .portfolio-description .testimonial-item .quote-icon-left,
+  .project-details .portfolio-description .testimonial-item .quote-icon-right {
+    color: color-mix(in srgb, var(--accent-color), transparent 50%);
+    font-size: 26px;
+    line-height: 0;
+  }
+  
+  .project-details .portfolio-description .testimonial-item .quote-icon-left {
+    display: inline-block;
+    left: -5px;
+    position: relative;
+  }
+  
+  .project-details .portfolio-description .testimonial-item .quote-icon-right {
+    display: inline-block;
+    right: -5px;
+    position: relative;
+    top: 10px;
+    transform: scale(-1, -1);
+  }
+  
+  .project-details .portfolio-description .testimonial-item p {
+    font-style: italic;
+    margin: 0 0 15px 0 0 0;
+    padding: 0;
+  }

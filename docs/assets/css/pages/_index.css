@@ -1,0 +1,128 @@
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .hero .info {
+    position: relative;
+    inset: 0;
+    z-index: 3;
+    padding: 140px 0 60px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero .info h2 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    font-size: 56px;
+    font-weight: 700;
+    text-align: center; /* Ensures text is centered */
+    white-space: nowrap; /* Prevents breaking into two lines */
+    position: relative;
+  }
+  
+  .hero .info h2:after {
+    color: var(--background-color);
+    content: "";
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--accent-color);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  
+  .hero .info p {
+    color: color-mix(in srgb, var(--contrast-color), transparent 20%);
+    font-size: 18px;
+  }
+  
+  .hero .carousel {
+    inset: 0;
+    position: absolute;
+    overflow: hidden;
+  }
+  
+  .hero .carousel-item {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition-duration: 0.3s;
+  }
+  
+  .hero .carousel-item img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .hero .carousel-item::before {
+    content: "";
+    background-color: color-mix(in srgb, #333333, transparent 30%);
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+  
+  .hero .carousel-control-prev {
+    justify-content: start;
+  }
+  
+  .hero .carousel-control-next {
+    justify-content: end;
+  }
+  
+  .hero .carousel-control-next-icon,
+  .hero .carousel-control-prev-icon {
+    background: none;
+    font-size: 26px;
+    line-height: 0;
+    background: color-mix(in srgb, var(--default-color), transparent 80%);
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    border-radius: 4px;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero .carousel-control-prev,
+  .hero .carousel-control-next {
+    z-index: 3;
+    transition: 0.2s;
+  }
+  
+  .hero .carousel-control-prev:focus,
+  .hero .carousel-control-next:focus {
+    opacity: 0.5;
+  }
+  
+  .hero .carousel-control-prev:hover,
+  .hero .carousel-control-next:hover {
+    opacity: 0.9;
+  }
