@@ -14,7 +14,7 @@
 
     a {
       color: color-mix(in srgb, var(--default-color), transparent 20%);
-      transition: 0.3s;
+      transition: 0.2s;
 
       &:hover {
         color: var(--accent-color);
