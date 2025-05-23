@@ -2,30 +2,26 @@
 /*--------------------------------------------------------------
 # Features Cards Section
 --------------------------------------------------------------*/
-.features-cards {
-  h3 {
+.features-cards h3 {
     font-size: 20px;
     font-weight: 700;
   }
-
-  p {
+  
+  .features-cards p {
     font-size: 15px;
     color: color-mix(in srgb, var(--default-color), transparent 20%);
   }
-
-  ul {
-    li {
-      display: flex;
-      align-items: center;
-      font-size: 14px;
-      padding-top: 10px;
-      color: color-mix(in srgb, var(--default-color), transparent 30%);
-
-      i {
-        font-size: 16px;
-        color: var(--accent-color);
-        margin-right: 6px;
-      }
-    }
+  
+  .features-cards ul li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding-top: 10px;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
   }
-}
+  
+  .features-cards ul li i {
+    font-size: 16px;
+    color: var(--accent-color);
+    margin-right: 6px;
+  }

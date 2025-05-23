@@ -1,3 +1,23 @@
+@use './sections/_hero.scss';
+@use './sections/_get-started.scss';
+@use './sections/_constructions.scss';
+@use './sections/_services.scss';
+@use './sections/_alt-services.scss';
+@use './sections/_features.scss';
+@use './sections/_projects.scss';
+@use './sections/_recent-blog-posts.scss';
+@use './sections/_about.scss';
+@use './sections/_stats-counter.scss';
+@use './sections/_alt-services-2.scss';
+@use './sections/_team.scss';
+@use './sections/_features-cards.scss';
+@use './sections/_service-details.scss';
+@use './sections/_project-details.scss';
+@use './sections/_blog-posts.scss';
+@use './sections/_blog-pagination.scss';
+@use './sections/_blog-details.scss';
+@use './sections/_contact.scss';
+@use './sections/_starter-section.scss';
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
@@ -22,59 +42,34 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  text-align: center;
-  padding-bottom: 60px;
-  position: relative;
-
-  h2 {
+    text-align: center;
+    padding-bottom: 60px;
+    position: relative;
+  }
+  
+  .section-title h2 {
     font-size: 32px;
     font-weight: 700;
     position: relative;
-
-    &:before,
-    &:after {
-      content: '';
-      width: 50px;
-      height: 2px;
-      background: var(--accent-color);
-      display: inline-block;
-    }
-
-    &:before {
-      margin: 0 15px 10px 0;
-    }
-
-    &:after {
-      margin: 0 0 10px 15px;
-    }
   }
-
-  p {
+  
+  .section-title h2:before,
+  .section-title h2:after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: var(--accent-color);
+    display: inline-block;
+  }
+  
+  .section-title h2:before {
+    margin: 0 15px 10px 0;
+  }
+  
+  .section-title h2:after {
+    margin: 0 0 10px 15px;
+  }
+  
+  .section-title p {
     margin-bottom: 0;
   }
-}
-
-@import './sections/_hero.scss';
-@import './sections/_get-started.scss';
-@import './sections/_constructions.scss';
-@import './sections/_services.scss';
-@import './sections/_alt-services.scss';
-@import './sections/_features.scss';
-@import './sections/_projects.scss';
-@import './sections/_testimonials.scss';
-@import './sections/_recent-blog-posts.scss';
-@import './sections/_about.scss';
-@import './sections/_stats-counter.scss';
-@import './sections/_alt-services-2.scss';
-@import './sections/_team.scss';
-@import './sections/_features-cards.scss';
-@import './sections/_service-details.scss';
-@import './sections/_project-details.scss';
-@import './sections/_blog-posts.scss';
-@import './sections/_blog-pagination.scss';
-@import './sections/_blog-details.scss';
-@import './sections/_blog-author.scss';
-@import './sections/_blog-comments.scss';
-@import './sections/_comment-form.scss';
-@import './sections/_contact.scss';
-@import './sections/_starter-section.scss';
