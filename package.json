@@ -1,29 +1,14 @@
 {
   "name": "movasol_website",
   "version": "1.0.0",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/palosferi/movasol.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/palosferi/movasol/issues"
-  },
-  "homepage": "https://github.com/palosferi/movasol#readme",
-  "description": "",
+  "build:sass":  "sass docs/assets/scss:docs/assets/css",
+  "build:render":"python3 render.py",
+  "build":       "npm run build:sass && npm run build:render",
+  "start":       "npm run build && npx serve docs"
+},
   "devDependencies": {
-    "copy-webpack-plugin": "^13.0.0",
-    "webpack": "^5.99.8",
-    "webpack-cli": "^6.0.1",
-    "webpack-manifest-plugin": "^5.0.1"
+    "sass": "^1.x",
+    "serve": "^14.2.4"
   }
 }
