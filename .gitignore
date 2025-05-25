@@ -1,8 +1,6 @@
 .vscode/
 node_modules/
 **/*.map
-dist/
-build/
 docs/assets/**/*.map
 docs/assets/scss/
-docs/assets/js/*.cjs.js   # if you copy vendor cjs sources here
+docs/assets/js/*.cjs.js

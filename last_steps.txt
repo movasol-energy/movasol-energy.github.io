@@ -1,7 +1,0 @@
-Check the website on different browsers (Chrome, Firefox, Edge) to ensure consistency.
-
-If you plan to add a mobile menu, build out the JavaScript functionality and corresponding HTML elements (e.g., a hamburger icon with the ID menu-toggle).
-
-Once the basic version is up, review it with your boss or colleagues to get feedback and identify improvements.
-
-Continuously update your content, design, and code based on feedback and testing.
