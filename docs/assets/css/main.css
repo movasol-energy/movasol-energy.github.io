@@ -405,7 +405,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background: var(--background-color) url("{{ 'img/footer-bg.jpg' | asset_url }}") top center no-repeat;
+  background: var(--background-color) url("/assets/img/footer-bg.jpg") top center no-repeat;
   background-size: cover;
   font-size: 14px;
   position: relative;
@@ -1392,11 +1392,22 @@ h6 {
   margin: 30px 0;
 }
 
+@media (min-width: 991px) {
+  .about .inner-title {
+    max-width: 65%;
+    margin: 0 0 80px 0;
+  }
+}
 .about .our-story {
   padding: 40px;
   background-color: color-mix(in srgb, var(--default-color), transparent 96%);
 }
 
+@media (min-width: 991px) {
+  .about .our-story {
+    padding-right: 35%;
+  }
+}
 .about .our-story h4 {
   text-transform: uppercase;
   font-size: 1.1rem;
@@ -1454,6 +1465,14 @@ h6 {
   position: relative;
 }
 
+@media (min-width: 992px) {
+  .about .about-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 600px;
+  }
+}
 .about .about-img img {
   position: absolute;
   inset: 0;
