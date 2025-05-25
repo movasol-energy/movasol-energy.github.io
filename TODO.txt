@@ -1,3 +1,6 @@
+LINK GOMB KIVETEL A PROJEKTEKROL : " INDEX PROJEKTEK PROJECTS HTML
+KIVITELEZES ES UZEMELTETES SZORTIROZASA
+
 state of js, svelte, vite?, typescript (js helyett)
 
 Jedlik Anyos bejelentes utananezes
@@ -11,15 +14,6 @@ hatterkepek:
 szurkes arnyalat, kb 10 kep ami valtogat, sajat kepek (lehet solarpro s)
 
 
-struktura:
-
-
-rolunk:
-
-
-szolgaltatasok:
-
-
 projektek:
 3 ful: all, kivitelezes, uzemeltetes
 all ketteosztva bal-jobb
@@ -30,22 +24,9 @@ hirek:
 projekt kezdese, updatek, atadasa
 
 
-kapcsolat:
-2 db ajanlatkeres gomb kivitelezes, uzemeltetes
-ezekre katt felugro form
-ami emailt kuld
-
-
-labjegyzet:
-
-
-
-
 minta:
 solarpro
 sts group
 
 segitseg:
 cpanel
-
-adam domain
