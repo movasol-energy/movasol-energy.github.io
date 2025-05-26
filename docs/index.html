@@ -1,22 +1,96 @@
-<!-- docs/index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
+
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url=/hu/">
-  <title>Redirecting…</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movasol – Home</title>
+  <meta name="description" content="">
+  <meta name="keywords"    content="">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/assets/img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/img/site.webmanifest" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+  
+    <!-- Vendor JS Files -->
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <script src="/assets/js/route-manager.js" defer></script>
+  <script src="/assets/js/theme.js"     defer></script>
+  <script src="/assets/js/main.js"      defer></script>
 </head>
-<body>
-  <p>If you are not redirected automatically, <a href="/hu/">click here</a>.</p>
-</body>
-</html>
+  <!-- =======================================================
+  * Template Name: Movasol
+  * Template URL: https://bootstrapmade.com/Movasol-bootstrap-construction-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <body class="index-page">
 
-{% extends "common/base_hu.html" %}
-{% set lang = "hu" %}
-{% set page_title = "Movasol – Kezdőlap" %}
-{% set body_class = "index-page" %}
-{% block content %}
-
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  
+      <a href="/en/" class="logo d-flex align-items-center">
+        <img src="/assets/img/logo/movasol_gg.png" alt="Movasol Logo">
+      </a>
+  
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/en/">Home</a></li>
+          <li><a href="/en/services">Services</a></li>
+          <li><a href="/en/projects">Projects</a></li>
+          <li><a href="/en/about">About Us</a></li>
+          <!--<li><a href="/en/news">News</a></li>-->
+          <li><a href="/en/contact">Contact</a></li>
+        </ul>
+  
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <div class="theme-switcher">
+        <button id="theme-toggle" class="theme-btn" aria-pressed="false">
+          <i class="bi bi-moon"></i>
+        </button>
+      </div>
+  
+      <div class="language-switcher">
+        <button onclick="setLanguage('hu')" class="lang-btn" id="btn-hu">HU</button>
+        <button onclick="setLanguage('en')" class="lang-btn" id="btn-en">EN</button>
+      </div>
+    </div>
+  </header>
+    
+    <!-- page-specific content -->
+    <main>
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
@@ -26,35 +100,95 @@
             <div class="col-lg-6 text-center">
               <h2>Redirecting…</h2>
               <p>If you are not redirected automatically:</p>
-              <a href="/hu/" class="round-button">Click here</a>
+              <a href="/hu/" class="contact-us-button">Click here</a>
             </div>
           </div>
         </div>
       </div>
 
       <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-
-        <div class="carousel-item">
-          <img src="/assets/img/hero-carousel/hero-carousel-1.jpg" alt="">
-        </div>
-
         <div class="carousel-item active">
-          <img src="/assets/img/hero-carousel/hero-carousel-1.jpg" alt="">
-        </div>
-
-        <div class="carousel-item">
-          <img src="/assets/img/hero-carousel/hero-carousel-4.jpg" alt="">
-        </div>
-
-        <div class="carousel-item">
-          <img src="/assets/img/hero-carousel/hero-carousel-4.jpg" alt="">
-        </div>
-
-        <div class="carousel-item">
           <img src="/assets/img/projects/galgaguta.jpg" alt="">
         </div>
 
       </div>
 
     </section><!-- /Hero Section -->
-    {% endblock %}
+  </main>
+  
+<footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4 gx-0 align-items-stretch">
+        <div class="col-lg-1 col-md-6 footer-about px-0">
+          <img src="/assets/img/logo/logo_w.png" alt="Movasol Logo">
+          <div class="social-links d-flex mt-0">
+            <a href="https://www.facebook.com/SolarproHungary/"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/solarpro-energy-hungary/"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-about px-0">
+          <div class="footer-about-placeholder-header"></div>
+          <ul>
+            <li><strong>Office: </strong>1026 Budapest</li>
+            <li>Riadó utca 1-3.</li>
+            <li><strong>Phone: </strong> <span>+36 20 268 8914</span></li>
+            <li><strong>Email: </strong> <span>info@movasol.hu</span></li>
+          </ul> 
+        </div>
+
+        <div class="col-lg-1 col-md-6 footer-links px-0">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="/en">Home</a></li>
+            <li><a href="/en/services">Services</a></li>
+            <li><a href="/en/projects">Projects</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links px-0">
+          <div class="footer-links-placeholder-header"></div>
+          <ul>
+            <li><a href="/en/about">About Us</a></li>
+            <!--<li><a href="/en/news">News</a></li>-->
+            <li><a href="/en/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links px-0">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/en/projects-details">Development</a></li>
+            <li><a href="/en/projects-details">Technical and Financial Consulting</a></li>
+            <li><a href="/en/projects-details">Design and Build Services</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links px-0">
+          <div class="footer-links-placeholder-header"></div>
+          <ul>
+            <li><a href="/en/projects-details">Testing and Commissioning</a></li>
+            <li><a href="/en/projects-details">Operations</a></li>
+            <li><a href="/en/projects-details">Certified Repairs</a></li>
+          </ul>
+        </div>
+
+        <!--<div class="col-lg-2 col-md-3 footer-links mx-lg-5 mx-md-5">
+          <h4>&nbsp;</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>-->
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Movasol</strong> <span>All rights reserved</span></p>
+      <p>Made by Pálos Ferenc.</p>
+    </div>
+
+  </footer>  
+  </body>
+  </html>
