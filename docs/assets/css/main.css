@@ -407,7 +407,7 @@ h6 {
   color: var(--default-color);
   background: var(--background-color) url("/assets/img/footer-bg.jpg") top center no-repeat;
   background-size: cover;
-  font-size: 14px;
+  font-size: 15px;
   position: relative;
 }
 
@@ -431,9 +431,10 @@ h6 {
   margin-bottom: 25px;
 }
 
-.footer .footer-about .logo img {
-  max-height: 40px;
-  margin-right: 6px;
+.footer img {
+  max-height: 60px;
+  margin-left: 10px;
+  margin-bottom: 24px;
 }
 
 .footer .footer-about .logo span {
@@ -444,9 +445,17 @@ h6 {
   letter-spacing: 1px;
 }
 
-.footer .footer-about p {
-  font-size: 14px;
-  font-family: var(--heading-font);
+.footer .footer-about {
+  color: var(--heading-color);
+  margin-bottom: 30px;
+}
+
+.footer .footer-about-placeholder-header {
+  height: 10px;
+}
+
+.footer-about ul li:nth-child(2) {
+  margin-left: 6ch;
 }
 
 .footer .social-links a {
@@ -456,9 +465,8 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  border: 1px solid color-mix(in srgb, var(--heading-color), transparent 20%);
+  color: color-mix(in srgb, var(--heading-color), transparent 20%);
   margin-right: 10px;
   transition: 0.2s;
 }
@@ -469,50 +477,48 @@ h6 {
 }
 
 .footer h4 {
-  font-size: 16px;
+  color: var(--heading-color);
+  font-size: 18px;
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
 }
 
 .footer .footer-links {
+  color: var(--heading-color);
   margin-bottom: 30px;
 }
 
-.footer .footer-links ul {
+.footer ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.footer .footer-links ul i {
+.footer ul li {
+  padding: 3;
+}
+
+.footers ul i {
   padding-right: 2px;
-  font-size: 12px;
   line-height: 0;
 }
 
-.footer .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-.footer .footer-links ul li:first-child {
+.footer ul li:first-child {
   padding-top: 0;
 }
 
-.footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+.footer ul a {
+  color: var(--heading-color);
   display: inline-block;
   line-height: 1;
 }
 
 .footer .footer-links ul a:hover {
   color: var(--accent-color);
-}
-
-.footer .footer-contact p {
-  margin-bottom: 5px;
 }
 
 .footer .copyright {
@@ -528,6 +534,23 @@ h6 {
 .footer .credits {
   margin-top: 8px;
   font-size: 13px;
+}
+
+.footer .footer-links-placeholder-header {
+  height: 41px;
+}
+
+.container.footer-top > .row {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+}
+
+.container.footer-top > .row > [class*=col-] {
+  margin-right: 0.5rem !important;
+}
+
+.container.footer-top > .row > [class*=col-]:last-child {
+  margin-right: 0 !important;
 }
 
 /*--------------------------------------------------------------
