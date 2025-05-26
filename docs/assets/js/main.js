@@ -143,12 +143,26 @@
    * 11 Active highlights
    */
   document.addEventListener('DOMContentLoaded', () => {
-    const path = location.pathname;            // e.g. "/hu/rolunk"
-    document.querySelectorAll('#navmenu a').forEach(a => {
-      if (a.getAttribute('href') === path) {
+    const normalize = p => p.replace(/\/+$/, '') || '/';
+    const currentPath = normalize(location.pathname);
+
+    const links = Array.from(document.querySelectorAll('#navmenu a'));
+    let matched = false;
+
+    links.forEach(a => {
+      const href = normalize(a.getAttribute('href'));
+      if (href === currentPath) {
         a.classList.add('active');
+        matched = true;
+      } else {
+        a.classList.remove('active');
       }
     });
+
+    if (!matched) {
+      const homeLink = links.find(a => normalize(a.getAttribute('href')) === '/');
+      if (homeLink) homeLink.classList.add('active');
+    }
   });
 
 })();

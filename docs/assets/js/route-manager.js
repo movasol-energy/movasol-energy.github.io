@@ -23,7 +23,6 @@
     Object.entries(huToEn).map(([hu, en]) => [en, hu])
   );
 
-  // update the .active / .inactive classes on the two buttons
   function updateButtonState(lang) {
     const btnHu = document.getElementById('btn-hu');
     const btnEn = document.getElementById('btn-en');
@@ -61,10 +60,8 @@
 
     localStorage.setItem(STORAGE_KEY, targetLang);
 
-    // pre-switch the button state for immediate feedback
     updateButtonState(targetLang);
 
-    // then navigate
     window.location.href = newPath;
   };
 
@@ -72,13 +69,11 @@
     const savedLang = localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG;
     const urlLang   = window.location.pathname.split('/')[1];
 
-    // If root or mismatched, bounce into savedLang's index.html
     if (!SUPPORTED_LANGS.includes(urlLang) || savedLang !== urlLang) {
       window.setLanguage(savedLang);
-      return;  // page is navigating away
+      return;
     }
 
-    // otherwise, set button state according to the active language
     updateButtonState(urlLang);
   });
 })();
