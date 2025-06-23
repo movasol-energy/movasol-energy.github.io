@@ -1,10 +1,10 @@
-MAKE ROLUNK&ABOUT PAGE LEGIT
+COLORS
+
+MAKE PAGES LEGIT
 
 ANGOL OLDALAK FORDITASA
 
 KIVITELEZES ES UZEMELTETES SZORTIROZASA
-
-state of js, svelte, vite?, typescript (js helyett)
 
 Jedlik Anyos bejelentes utananezes
 batteryre nagyobb hangsuly
@@ -12,20 +12,8 @@ KEZDOLAP HELYETT:
 felugro ablak/felso sav link/statikus ablak ami
 a jedlik programrol ir es linkel egy formkitoltore 
 
-
-hatterkepek:
-szurkes arnyalat, kb 10 kep ami valtogat, sajat kepek (lehet solarpro s)
-
-
-projektek:
-3 ful: all, kivitelezes, uzemeltetes
-all ketteosztva bal-jobb
-projektek nagy reszet athuzni solarprobol
-
-
 hirek:
 projekt kezdese, updatek, atadasa
-
 
 minta:
 solarpro
