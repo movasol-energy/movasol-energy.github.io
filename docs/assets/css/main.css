@@ -1,11 +1,16 @@
+@charset "UTF-8";
 /*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 :root {
-  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Roboto", sans-serif;
-  --nav-font: "Poppins", sans-serif;
+  /* Primary Brand Fonts */
+  --default-font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --hero-font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --hero-weight: 800;
+  --cta-weight: 600;
+  --default-weight: 400;
+  /* Color Palette */
   --background-color: #ffffff;
   --default-color: #000000;
   --accent-color: #2FAD6F;
@@ -13,13 +18,12 @@
   --text-color: #212529;
 }
 
+/* Dark‑mode overrides */
 .dark-theme {
   --background-color: #000000;
   --default-color: #ffffff;
   --surface-color: #212529;
   --text-color: #f7f7f7;
-  background-color: var(--background-color);
-  color: var(--default-color);
 }
 
 /*--------------------------------------------------------------
@@ -63,7 +67,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: var(--default-font);
 }
 
 /*--------------------------------------------------------------
@@ -84,14 +88,14 @@ h6 {
 .header .logo h1 {
   font-size: 24px;
   margin: 0;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   color: var(--deafult-color);
 }
 
 .header .logo span {
   font-size: 24px;
   padding-left: 1px;
-  font-family: var(--heading-font);
+  font-family: var(--default-font);
   color: var(--default-color);
 }
 
@@ -116,7 +120,7 @@ h6 {
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
   padding: 6px 12px;
-  font-weight: bold;
+  font-weight: var(--cta-weight);
   cursor: pointer;
   border-radius: 4px;
   display: flex;
@@ -154,7 +158,7 @@ h6 {
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
   padding: 6px 12px;
-  font-weight: bold;
+  font-weight: var(--cta-weight);
   cursor: pointer;
   border-radius: 4px;
 }
@@ -220,8 +224,8 @@ h6 {
     color: var(--nav-dropdown-color);
     font-size: 14px;
     padding: 0 2px;
-    font-family: var(--nav-font);
-    font-weight: 500;
+    font-family: var(--default-font);
+    font-weight: var(--default-weight);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -288,9 +292,9 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-dropdown-color);
     padding: 10px 20px;
-    font-family: var(--nav-font);
+    font-family: var(--default-font);
     font-size: 17px;
-    font-weight: 500;
+    font-weight: var(--default-weight);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -410,9 +414,9 @@ h6 {
 
 .footer .footer-about .logo span {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: var(--default-font);
   font-size: 26px;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   letter-spacing: 1px;
 }
 
@@ -449,7 +453,7 @@ h6 {
 .footer h4 {
   color: var(--heading-color);
   font-size: 18px;
-  font-weight: bold;
+  font-weight: var(--cta-weight);
   position: relative;
   padding-bottom: 12px;
 }
@@ -624,7 +628,7 @@ h6 {
 
 .page-title h1 {
   font-size: 56px;
-  font-weight: 500;
+  font-weight: var(--cta-weight);
   margin-bottom: 10px;
 }
 
@@ -641,7 +645,7 @@ h6 {
   display: inline-flex;
   align-items: center;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: var(--cta-weight);
   color: #fff;
 }
 .page-title .breadcrumbs ol li a {
@@ -675,17 +679,17 @@ h6 {
   position: relative;
   inset: 0;
   z-index: 3;
-  padding: 120px 0 200px 0;
+  padding: 0 0 0 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: start;
+  text-align: center;
 }
 .hero .info .benefits {
   list-style: none;
   margin: 0 0 2rem;
-  margin-right: 70px;
+  margin-right: 0px;
   font-size: 1.25rem;
   color: var(--text-color);
   padding: 0;
@@ -704,10 +708,10 @@ h6 {
 
 .hero .info h1 {
   font-size: 4rem;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
-  margin-left: 70px;
   color: var(--text-color);
+  font-family: var(--hero-font);
 }
 
 .hero .carousel {
@@ -743,8 +747,8 @@ h6 {
   z-index: 2;
   background: var(--accent-color);
   color: #e0e0e0;
-  font-family: var(--heading-font);
-  font-weight: 500;
+  font-family: var(--default-font);
+  font-weight: var(--cta-weight);
   font-size: 20px;
   letter-spacing: 1px;
   display: inline-block;
@@ -760,12 +764,10 @@ h6 {
 }
 
 #hero {
-  background-image: url("/assets/img/background/page-title-bg-solar-w.png");
-}
-
-html[data-bs-theme=dark] #hero,
-body.dark-theme #hero {
-  background-image: url("/assets/img/background/page-title-bg-solar-b.png");
+  background-image: url("/assets/img/background/background_solar.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 /*--------------------------------------------------------------
@@ -776,7 +778,7 @@ body.dark-theme #hero {
 }
 .get-started .content h3 {
   font-size: 36px;
-  font-weight: 600;
+  font-weight: var(--cta-weight);
   margin-bottom: 25px;
   padding-bottom: 25px;
   position: relative;
@@ -806,7 +808,7 @@ body.dark-theme #hero {
 }
 .get-started .php-email-form h3 {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -877,7 +879,7 @@ body.dark-theme #hero {
 }
 
 .constructions .card-item h4 {
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   font-size: 20px;
   margin-bottom: 15px;
 }
@@ -926,7 +928,7 @@ body.dark-theme #hero {
 
 .services .service-item h3 {
   color: color-mix(in srgb, #e0e0e0, transparent 20%);
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   margin: 0 0 20px 0;
   padding-bottom: 8px;
   font-size: 22px;
@@ -988,7 +990,7 @@ body.dark-theme #hero {
 .alt-services h3 {
   color: var(--heading-color);
   font-size: 28px;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
@@ -1030,7 +1032,7 @@ body.dark-theme #hero {
 }
 
 .alt-services .icon-box h4 {
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   margin-bottom: 10px;
   font-size: 18px;
 }
@@ -1077,7 +1079,7 @@ body.dark-theme #hero {
 
 .features .nav-link h4 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: var(--cta-weight);
   margin: 0;
 }
 
@@ -1098,7 +1100,7 @@ body.dark-theme #hero {
 
 .features .tab-pane h3 {
   color: var(--heading-color);
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   font-size: 32px;
   position: relative;
   margin-bottom: 20px;
@@ -1150,7 +1152,7 @@ body.dark-theme #hero {
   display: inline-block;
   padding: 0;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: var(--cta-weight);
   margin: 0 10px;
   line-height: 1;
   margin-bottom: 5px;
@@ -1218,12 +1220,12 @@ body.dark-theme #hero {
 
 .projects .portfolio-content .portfolio-info h4 {
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: var(--cta-weight);
 }
 
 .projects .portfolio-content .portfolio-info p {
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: var(--cta-weight);
 }
 
 .projects .portfolio-content .portfolio-info .preview-link,
@@ -1253,8 +1255,8 @@ body.dark-theme #hero {
 
 .projects .more-button {
   color: var(--heading-color);
-  font-family: var(--heading-font);
-  font-weight: 500;
+  font-family: var(--default-font);
+  font-weight: var(--cta-weight);
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
@@ -1298,7 +1300,7 @@ body.dark-theme #hero {
   text-transform: uppercase;
   font-size: 13px;
   padding: 6px 12px;
-  font-weight: 500;
+  font-weight: var(--cta-weight);
 }
 
 .recent-blog-posts .post-item .post-content {
@@ -1308,7 +1310,7 @@ body.dark-theme #hero {
 .recent-blog-posts .post-item .post-title {
   color: var(--heading-color);
   font-size: 20px;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   margin-bottom: 15px;
 }
 
@@ -1330,7 +1332,7 @@ body.dark-theme #hero {
 .recent-blog-posts .post-item .readmore {
   display: flex;
   align-items: center;
-  font-weight: 600;
+  font-weight: var(--cta-weight);
   line-height: 1;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
@@ -1355,7 +1357,7 @@ body.dark-theme #hero {
 --------------------------------------------------------------*/
 .about .inner-title {
   font-size: 2.75rem;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   margin: 30px 0;
 }
 
@@ -1384,7 +1386,7 @@ body.dark-theme #hero {
 
 .about .our-story h3 {
   font-size: 2.25rem;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   color: #e0e0e0;
 }
 
@@ -1462,13 +1464,13 @@ body.dark-theme #hero {
   color: #e0e0e0;
   font-size: 36px;
   display: block;
-  font-weight: 600;
+  font-weight: var(--cta-weight);
 }
 
 .stats-counter .stats-item p {
   padding: 0;
   margin: 0;
-  font-family: var(--heading-font);
+  font-family: var(--default-font);
   font-size: 16px;
   color: #e0e0e0;
 }
@@ -1495,7 +1497,7 @@ body.dark-theme #hero {
 
 .alt-services-2 h3 {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   margin-bottom: 20px;
 }
 
@@ -1511,7 +1513,7 @@ body.dark-theme #hero {
 }
 
 .alt-services-2 .icon-box h4 {
-  font-weight: 600;
+  font-weight: var(--cta-weight);
   margin-bottom: 10px;
   font-size: 18px;
 }
@@ -1569,7 +1571,7 @@ body.dark-theme #hero {
 }
 
 .team .member .member-info h4 {
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   margin-bottom: 6px;
   font-size: 18px;
 }
@@ -1598,7 +1600,7 @@ body.dark-theme #hero {
 --------------------------------------------------------------*/
 .features-cards h3 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
 }
 
 .features-cards p {
@@ -1641,7 +1643,7 @@ body.dark-theme #hero {
 
 .service-details .services-list a.active {
   color: var(--heading-color);
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   border-color: var(--accent-color);
 }
 
@@ -1655,12 +1657,12 @@ body.dark-theme #hero {
 
 .service-details h3 {
   font-size: 26px;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
 }
 
 .service-details h4 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
 }
 
 .service-details p {
@@ -1714,7 +1716,7 @@ body.dark-theme #hero {
 
 .project-details .portfolio-info h3 {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
@@ -1745,14 +1747,14 @@ body.dark-theme #hero {
 
 .project-details .portfolio-info ul strong {
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: var(--default-weight);
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 14px;
 }
 
 .project-details .portfolio-description h2 {
   font-size: 26px;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   margin-bottom: 20px;
 }
 
@@ -1777,7 +1779,7 @@ body.dark-theme #hero {
 
 .project-details .portfolio-description .testimonial-item h3 {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: var(--cta-weight);
   margin: 15px 0 5px 0;
   padding-top: 20px;
 }
@@ -1832,7 +1834,7 @@ body.dark-theme #hero {
   text-transform: uppercase;
   font-size: 13px;
   padding: 6px 12px;
-  font-weight: 500;
+  font-weight: var(--cta-weight);
 }
 
 .blog-posts .post-content {
@@ -1842,7 +1844,7 @@ body.dark-theme #hero {
 .blog-posts .post-title {
   font-size: 20px;
   color: var(--heading-color);
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   margin-bottom: 15px;
 }
 
@@ -1868,7 +1870,7 @@ body.dark-theme #hero {
 .blog-posts .readmore {
   display: flex;
   align-items: center;
-  font-weight: 600;
+  font-weight: var(--cta-weight);
   line-height: 1;
   color: color-mix(in srgb, var(--heading-color), transparent 20%);
 }
@@ -1947,7 +1949,7 @@ body.dark-theme #hero {
 .blog-details .title {
   color: var(--heading-color);
   font-size: 28px;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   padding: 0;
   margin: 30px 0;
 }
@@ -1959,7 +1961,7 @@ body.dark-theme #hero {
 .blog-details .content h3 {
   font-size: 22px;
   margin-top: 30px;
-  font-weight: bold;
+  font-weight: var(--cta-weight);
 }
 
 .blog-details .content blockquote {
@@ -1976,7 +1978,7 @@ body.dark-theme #hero {
   line-height: 1.6;
   margin-bottom: 0;
   font-style: italic;
-  font-weight: 500;
+  font-weight: var(--cta-weight);
   font-size: 22px;
 }
 
@@ -2106,7 +2108,7 @@ body.dark-theme #hero {
 
 .contact .info-item h3 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   margin: 0 0 5px 0;
   color: #e0e0e0;
 }
@@ -2126,7 +2128,7 @@ body.dark-theme #hero {
 
 .contact .section-title h2 {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   position: relative;
   margin-top: 0px;
 }
@@ -2157,8 +2159,8 @@ body.dark-theme #hero {
 .contact .offer-button {
   background: var(--accent-color);
   color: var(--contrast-color);
-  font-family: var(--heading-font);
-  font-weight: 500;
+  font-family: var(--default-font);
+  font-weight: var(--cta-weight);
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
@@ -2210,7 +2212,7 @@ section,
 
 .section-title h2 {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   position: relative;
 }
 
@@ -2315,7 +2317,7 @@ section,
 }
 .recent-posts-widget .post-item h4 {
   font-size: 15px;
-  font-weight: bold;
+  font-weight: var(--cta-weight);
   margin-bottom: 5px;
 }
 .recent-posts-widget .post-item h4 a {
@@ -2371,7 +2373,7 @@ section,
 .widget-title {
   color: var(--heading-color);
   font-size: 20px;
-  font-weight: 700;
+  font-weight: var(--cta-weight);
   padding: 0;
   margin: 0 0 20px 0;
 }
