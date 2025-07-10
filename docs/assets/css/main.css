@@ -1,29 +1,45 @@
-@charset "UTF-8";
 /*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
+@font-face {
+  font-family: "Ethnocentric";
+  src: url("/fonts/Ethnocentric-SemiBold.woff2") format("woff2"), url("/fonts/Ethnocentric-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
-  /* Primary Brand Fonts */
-  --default-font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --hero-font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --hero-weight: 800;
-  --cta-weight: 600;
-  --default-weight: 400;
-  /* Color Palette */
+  --default-font: "Lato", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --title-font: "Ethnocentric", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --default-weight: 500;
+  --title-weight: 600;
   --background-color: #ffffff;
   --default-color: #000000;
   --accent-color: #2FAD6F;
-  --surface-color: #f7f7f7;
-  --text-color: #212529;
+  --surface-color: #f8f8f8;
+  --text-color: #151515;
 }
 
-/* Dark‑mode overrides */
 .dark-theme {
   --background-color: #000000;
   --default-color: #ffffff;
-  --surface-color: #212529;
-  --text-color: #f7f7f7;
+  --surface-color: #151515;
+  --text-color: #f8f8f8;
+}
+
+body {
+  font-family: var(--default-font);
+  font-weight: var(--default-weight);
+  line-height: 1.6;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font);
+  font-weight: var(--title-weight);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 /*--------------------------------------------------------------
@@ -88,7 +104,7 @@ h6 {
 .header .logo h1 {
   font-size: 24px;
   margin: 0;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   color: var(--deafult-color);
 }
 
@@ -120,7 +136,7 @@ h6 {
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
   padding: 6px 12px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   cursor: pointer;
   border-radius: 4px;
   display: flex;
@@ -158,7 +174,7 @@ h6 {
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
   padding: 6px 12px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   cursor: pointer;
   border-radius: 4px;
 }
@@ -416,7 +432,7 @@ h6 {
   color: var(--heading-color);
   font-family: var(--default-font);
   font-size: 26px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   letter-spacing: 1px;
 }
 
@@ -453,7 +469,7 @@ h6 {
 .footer h4 {
   color: var(--heading-color);
   font-size: 18px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   position: relative;
   padding-bottom: 12px;
 }
@@ -628,7 +644,7 @@ h6 {
 
 .page-title h1 {
   font-size: 56px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin-bottom: 10px;
 }
 
@@ -645,7 +661,7 @@ h6 {
   display: inline-flex;
   align-items: center;
   font-size: 16px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   color: #fff;
 }
 .page-title .breadcrumbs ol li a {
@@ -690,8 +706,8 @@ h6 {
   transform: translate(-50%, -50%);
   margin: 0;
   font-size: 5.5rem;
-  font-family: var(--hero-font);
-  font-weight: var(--cta-weight);
+  font-family: var(--title-font);
+  font-weight: var(--title-weight);
   color: #000;
   white-space: nowrap;
   pointer-events: auto;
@@ -709,7 +725,7 @@ h6 {
   background: var(--accent-color);
   color: #e0e0e0;
   font-family: var(--default-font);
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   font-size: 20px;
   letter-spacing: 1px;
   border: 2px solid var(--accent-color);
@@ -730,7 +746,7 @@ h6 {
 }
 .get-started .content h3 {
   font-size: 36px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin-bottom: 25px;
   padding-bottom: 25px;
   position: relative;
@@ -760,7 +776,7 @@ h6 {
 }
 .get-started .php-email-form h3 {
   font-size: 14px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -831,7 +847,7 @@ h6 {
 }
 
 .constructions .card-item h4 {
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   font-size: 20px;
   margin-bottom: 15px;
 }
@@ -880,7 +896,7 @@ h6 {
 
 .services .service-item h3 {
   color: color-mix(in srgb, #e0e0e0, transparent 20%);
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin: 0 0 20px 0;
   padding-bottom: 8px;
   font-size: 22px;
@@ -942,7 +958,7 @@ h6 {
 .alt-services h3 {
   color: var(--heading-color);
   font-size: 28px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
@@ -984,7 +1000,7 @@ h6 {
 }
 
 .alt-services .icon-box h4 {
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin-bottom: 10px;
   font-size: 18px;
 }
@@ -1031,7 +1047,7 @@ h6 {
 
 .features .nav-link h4 {
   font-size: 18px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin: 0;
 }
 
@@ -1052,7 +1068,7 @@ h6 {
 
 .features .tab-pane h3 {
   color: var(--heading-color);
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   font-size: 32px;
   position: relative;
   margin-bottom: 20px;
@@ -1104,7 +1120,7 @@ h6 {
   display: inline-block;
   padding: 0;
   font-size: 18px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin: 0 10px;
   line-height: 1;
   margin-bottom: 5px;
@@ -1172,14 +1188,14 @@ h6 {
 
 .projects .portfolio-content .portfolio-info h4 {
   font-size: 1.125rem;
-  font-weight: var(--cta-weight);
-  color: #ffffff;
+  font-weight: var(--title-weight);
+  color: #f8f8f8;
 }
 
 .projects .portfolio-content .portfolio-info p {
   font-size: 0.95rem;
-  font-weight: var(--cta-weight);
-  color: #ffffff;
+  font-weight: var(--title-weight);
+  color: #f8f8f8;
 }
 
 .projects .portfolio-content .portfolio-info .preview-link,
@@ -1210,7 +1226,7 @@ h6 {
 .projects .more-button {
   color: var(--heading-color);
   font-family: var(--default-font);
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
@@ -1254,7 +1270,7 @@ h6 {
   text-transform: uppercase;
   font-size: 13px;
   padding: 6px 12px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
 }
 
 .recent-blog-posts .post-item .post-content {
@@ -1264,7 +1280,7 @@ h6 {
 .recent-blog-posts .post-item .post-title {
   color: var(--heading-color);
   font-size: 20px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin-bottom: 15px;
 }
 
@@ -1286,7 +1302,7 @@ h6 {
 .recent-blog-posts .post-item .readmore {
   display: flex;
   align-items: center;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   line-height: 1;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
@@ -1311,7 +1327,7 @@ h6 {
 --------------------------------------------------------------*/
 .about .inner-title {
   font-size: 2.75rem;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin: 30px 0;
 }
 
@@ -1340,7 +1356,7 @@ h6 {
 
 .about .our-story h3 {
   font-size: 2.25rem;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   color: #e0e0e0;
 }
 
@@ -1418,7 +1434,7 @@ h6 {
   color: #e0e0e0;
   font-size: 36px;
   display: block;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
 }
 
 .stats-counter .stats-item p {
@@ -1451,7 +1467,7 @@ h6 {
 
 .alt-services-2 h3 {
   font-size: 28px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin-bottom: 20px;
 }
 
@@ -1467,7 +1483,7 @@ h6 {
 }
 
 .alt-services-2 .icon-box h4 {
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin-bottom: 10px;
   font-size: 18px;
 }
@@ -1525,7 +1541,7 @@ h6 {
 }
 
 .team .member .member-info h4 {
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin-bottom: 6px;
   font-size: 18px;
 }
@@ -1554,7 +1570,7 @@ h6 {
 --------------------------------------------------------------*/
 .features-cards h3 {
   font-size: 20px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
 }
 
 .features-cards p {
@@ -1597,7 +1613,7 @@ h6 {
 
 .service-details .services-list a.active {
   color: var(--heading-color);
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   border-color: var(--accent-color);
 }
 
@@ -1611,12 +1627,12 @@ h6 {
 
 .service-details h3 {
   font-size: 26px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
 }
 
 .service-details h4 {
   font-size: 20px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
 }
 
 .service-details p {
@@ -1670,7 +1686,7 @@ h6 {
 
 .project-details .portfolio-info h3 {
   font-size: 22px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
@@ -1708,7 +1724,7 @@ h6 {
 
 .project-details .portfolio-description h2 {
   font-size: 26px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin-bottom: 20px;
 }
 
@@ -1733,7 +1749,7 @@ h6 {
 
 .project-details .portfolio-description .testimonial-item h3 {
   font-size: 18px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin: 15px 0 5px 0;
   padding-top: 20px;
 }
@@ -1788,7 +1804,7 @@ h6 {
   text-transform: uppercase;
   font-size: 13px;
   padding: 6px 12px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
 }
 
 .blog-posts .post-content {
@@ -1798,7 +1814,7 @@ h6 {
 .blog-posts .post-title {
   font-size: 20px;
   color: var(--heading-color);
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin-bottom: 15px;
 }
 
@@ -1824,7 +1840,7 @@ h6 {
 .blog-posts .readmore {
   display: flex;
   align-items: center;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   line-height: 1;
   color: color-mix(in srgb, var(--heading-color), transparent 20%);
 }
@@ -1903,7 +1919,7 @@ h6 {
 .blog-details .title {
   color: var(--heading-color);
   font-size: 28px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   padding: 0;
   margin: 30px 0;
 }
@@ -1915,7 +1931,7 @@ h6 {
 .blog-details .content h3 {
   font-size: 22px;
   margin-top: 30px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
 }
 
 .blog-details .content blockquote {
@@ -1932,7 +1948,7 @@ h6 {
   line-height: 1.6;
   margin-bottom: 0;
   font-style: italic;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   font-size: 22px;
 }
 
@@ -2062,7 +2078,7 @@ h6 {
 
 .contact .info-item h3 {
   font-size: 18px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin: 0 0 5px 0;
   color: #e0e0e0;
 }
@@ -2082,7 +2098,7 @@ h6 {
 
 .contact .section-title h2 {
   font-size: 32px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   position: relative;
   margin-top: 0px;
 }
@@ -2114,7 +2130,7 @@ h6 {
   background: var(--accent-color);
   color: var(--contrast-color);
   font-family: var(--default-font);
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
@@ -2166,7 +2182,7 @@ section,
 
 .section-title h2 {
   font-size: 32px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   position: relative;
 }
 
@@ -2271,7 +2287,7 @@ section,
 }
 .recent-posts-widget .post-item h4 {
   font-size: 15px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   margin-bottom: 5px;
 }
 .recent-posts-widget .post-item h4 a {
@@ -2327,7 +2343,7 @@ section,
 .widget-title {
   color: var(--heading-color);
   font-size: 20px;
-  font-weight: var(--cta-weight);
+  font-weight: var(--title-weight);
   padding: 0;
   margin: 0 0 20px 0;
 }
