@@ -665,109 +665,61 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
+  position: relative;
   width: 100%;
   min-height: calc(100vh + 240px);
-  position: relative;
-  padding: 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
   overflow: hidden;
+  background-image: url("/assets/img/background/background_solar.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
-.hero .info {
-  position: relative;
+.hero .info .container {
+  position: absolute;
   inset: 0;
-  z-index: 3;
-  padding: 120px 0 200px 0;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: start;
-}
-.hero .info .benefits {
-  list-style: none;
-  margin: 0 0 2rem;
-  margin-right: 70px;
-  font-size: 1.25rem;
-  color: var(--text-color);
-  padding: 0;
-}
-.hero .info .benefits li {
-  margin-bottom: 0.75em;
-}
-.hero .info .benefits .checkmark {
-  font-family: Arial, sans-serif;
-  font-size: 1.2em;
-  color: var(--accent-color);
-  margin-right: 0.5em;
-  display: inline-block;
-  line-height: 1;
+  height: 100%;
+  pointer-events: none;
 }
 
 .hero .info h1 {
-  font-size: 4rem;
-  text-align: center;
-  white-space: nowrap;
-  color: var(--text-color);
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 5.5rem;
   font-family: var(--hero-font);
-}
-
-.hero .carousel {
-  inset: 0;
-  position: absolute;
-  overflow: hidden;
-}
-
-.hero .carousel-item {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-.hero .carousel-item img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+  font-weight: var(--cta-weight);
+  color: #000;
+  white-space: nowrap;
+  pointer-events: auto;
 }
 
 .hero .contact-us-button {
   position: absolute;
-  bottom: 0px;
+  top: 55%;
   left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 4px;
   background: var(--accent-color);
   color: #e0e0e0;
   font-family: var(--default-font);
   font-weight: var(--cta-weight);
   font-size: 20px;
   letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 4px;
-  margin: 10px;
   border: 2px solid var(--accent-color);
+  z-index: 2;
+  pointer-events: auto;
 }
 
 .hero .contact-us-button:hover {
   filter: brightness(0.9);
   border-color: var(--accent-color);
-}
-
-#hero {
-  background-image: url("/assets/img/background/background_solar.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 /*--------------------------------------------------------------
@@ -1221,11 +1173,13 @@ h6 {
 .projects .portfolio-content .portfolio-info h4 {
   font-size: 1.125rem;
   font-weight: var(--cta-weight);
+  color: #ffffff;
 }
 
 .projects .portfolio-content .portfolio-info p {
   font-size: 0.95rem;
   font-weight: var(--cta-weight);
+  color: #ffffff;
 }
 
 .projects .portfolio-content .portfolio-info .preview-link,
