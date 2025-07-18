@@ -1345,7 +1345,7 @@ h6 {
 
 @media (min-width: 991px) {
   .about .our-story {
-    padding-right: 35%;
+    padding-right: 25%;
   }
 }
 .about .our-story h4 {
@@ -1357,6 +1357,7 @@ h6 {
 .about .our-story h3 {
   font-size: 2.25rem;
   font-weight: var(--title-weight);
+  margin: 0 0 20px 0;
   color: #e0e0e0;
 }
 
@@ -1405,12 +1406,103 @@ h6 {
   position: absolute;
   inset: 0;
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
+  left: 20%;
   border-radius: 4px;
   object-fit: cover;
   object-position: center;
   z-index: 1;
+}
+
+.about .benchmarks-1 {
+  padding: 40px;
+  background-color: #1e1e1e;
+  border-radius: 4px;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.about .benchmarks-1 h4 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+.about .benchmarks-1 p {
+  color: #e0e0e0;
+}
+
+.about .benchmarks-1 p:last-child {
+  margin-bottom: 0;
+}
+
+.about .benchmarks-1 {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -15vw;
+  width: 80vw;
+}
+
+.about .benchmarks-2 {
+  padding: 40px;
+  background-color: #1e1e1e;
+  border-radius: 4px;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.about .benchmarks-2 h4 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+.about .benchmarks-2 p {
+  color: #e0e0e0;
+}
+
+.about .benchmarks-2 p:last-child {
+  margin-bottom: 0;
+}
+
+.about .benchmarks-2 {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -26vw;
+  width: 80vw;
+}
+
+.about .contact-us-button {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  margin: 50px 0 0 0;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 4px;
+  background: var(--accent-color);
+  color: #e0e0e0;
+  font-family: var(--default-font);
+  font-weight: var(--title-weight);
+  font-size: 20px;
+  letter-spacing: 1px;
+  border: 2px solid var(--accent-color);
+  pointer-events: auto;
+}
+
+.row {
+  position: relative;
+}
+
+.about .contact-us-button:hover {
+  filter: brightness(0.9);
+  border-color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------
