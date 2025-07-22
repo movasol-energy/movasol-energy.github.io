@@ -199,17 +199,6 @@ h6 {
   opacity: 0.7;
 }
 
-.project-details .portfolio-info .btn-visit {
-  padding: 8px 40px;
-  background: var(--accent-color);
-  color: var(--surface-color);
-  border-radius: 4px;
-}
-
-.project-details .portfolio-info .btn-visit:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -637,7 +626,7 @@ h6 {
 
 .page-title:before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 40%);
+  background-color: color-mix(in srgb, #000000, transparent 40%);
   position: absolute;
   inset: 0;
 }
@@ -646,6 +635,7 @@ h6 {
   font-size: 56px;
   font-weight: var(--title-weight);
   margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .page-title .breadcrumbs ol {
@@ -723,7 +713,7 @@ h6 {
   padding: 12px 40px;
   border-radius: 4px;
   background: var(--accent-color);
-  color: #e0e0e0;
+  color: #ffffff;
   font-family: var(--default-font);
   font-weight: var(--title-weight);
   font-size: 20px;
@@ -1325,6 +1315,15 @@ h6 {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+#about {
+  margin-bottom: 80px;
+}
+
+.about {
+  position: relative;
+  padding-bottom: 200px;
+}
+
 .about .inner-title {
   font-size: 2.75rem;
   font-weight: var(--title-weight);
@@ -1422,6 +1421,11 @@ h6 {
   width: 100%;
   max-width: none;
   margin: 0 auto;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -15vw;
+  width: 80vw;
 }
 
 .about .benchmarks-1 h4 {
@@ -1438,14 +1442,6 @@ h6 {
   margin-bottom: 0;
 }
 
-.about .benchmarks-1 {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -15vw;
-  width: 80vw;
-}
-
 .about .benchmarks-2 {
   padding: 40px;
   background-color: #1e1e1e;
@@ -1453,6 +1449,11 @@ h6 {
   width: 100%;
   max-width: none;
   margin: 0 auto;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -26vw;
+  width: 80vw;
 }
 
 .about .benchmarks-2 h4 {
@@ -1469,25 +1470,19 @@ h6 {
   margin-bottom: 0;
 }
 
-.about .benchmarks-2 {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -26vw;
-  width: 80vw;
+#about .container.text-center {
+  text-align: center !important;
 }
 
 .about .contact-us-button {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  margin: 50px 0 0 0;
   display: inline-block;
-  padding: 15px 30px;
+  margin: 40px auto 0;
+  position: static;
+  transform: none;
+  padding: 15px 40px;
   border-radius: 4px;
   background: var(--accent-color);
-  color: #e0e0e0;
+  color: #ffffff;
   font-family: var(--default-font);
   font-weight: var(--title-weight);
   font-size: 20px;
@@ -1503,6 +1498,10 @@ h6 {
 .about .contact-us-button:hover {
   filter: brightness(0.9);
   border-color: var(--accent-color);
+}
+
+.green {
+  color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------
