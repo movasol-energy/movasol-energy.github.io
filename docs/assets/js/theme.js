@@ -6,9 +6,9 @@
   function applyTheme(theme, toggleBtn) {
     html.setAttribute('data-bs-theme', theme);
 
-    body.classList.toggle('dark-theme', theme === 'dark');
+    body.classList.toggle('dark', theme === 'dark');
     const header = document.querySelector('.header') || document.getElementById('header');
-    if (header) header.classList.toggle('dark-theme', theme === 'dark');
+    if (header) header.classList.toggle('dark', theme === 'dark');
 
     if (toggleBtn) {
       toggleBtn.innerHTML = theme === 'dark'

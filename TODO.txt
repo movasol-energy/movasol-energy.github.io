@@ -1,17 +1,9 @@
-delete from files:
-alt-services.jpg
-services.jpg
-
-
 our story text: bold and green and normal confusion
 mission statement
-cert: picture
-team: replace black
 
-COLORS
 FONTS
 
-MAKE PAGES LEGIT
+Add stuff to home page
 
 ANGOL OLDALAK FORDITASA
 
