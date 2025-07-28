@@ -1248,14 +1248,13 @@ h6 {
   color: var(--contrast-color);
 }
 
-.black-bg {
-  background-color: #080808;
+.home-page-projects {
   padding: 2rem;
   border-radius: 0rem;
   margin-bottom: 2rem;
 }
 
-.black-bg .portfolio-item {
+.home-page-projects .portfolio-item {
   position: relative;
   z-index: 1;
 }
@@ -1333,12 +1332,12 @@ h6 {
 # About Section
 --------------------------------------------------------------*/
 #about {
-  margin-bottom: 80px;
+  margin-bottom: 10px;
 }
 
 .about {
   position: relative;
-  padding-bottom: 200px;
+  padding-bottom: 20px;
 }
 
 .about .inner-title {
@@ -2236,23 +2235,44 @@ h6 {
 }
 
 .contact .offer-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 12px 40px;
+  min-height: calc(2.8em + 24px);
   background: var(--accent-color);
   color: var(--contrast-color);
   font-family: var(--default-font);
   font-weight: var(--title-weight);
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 4px;
-  margin: 10px;
-  margin-bottom: 37px;
   border: 2px solid var(--accent-color);
+  border-radius: 4px;
+  margin: 10px 0 37px;
 }
 
 .contact .offer-button:hover {
   filter: brightness(0.9);
   border-color: var(--accent-color);
+}
+
+html[lang=hu] .contact .offer-button {
+  font-size: 22px !important;
+  line-height: 1.2 !important;
+  padding: 8px 32px !important;
+  min-height: calc(2.4em + 16px) !important;
+  letter-spacing: 0.5px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 10px 0 37px !important;
 }
 
 /*--------------------------------------------------------------

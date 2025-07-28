@@ -1,3 +1,5 @@
+contact page make 2 columns have same height at bottom
+
 our story text: bold and green and normal confusion
 mission statement
 
