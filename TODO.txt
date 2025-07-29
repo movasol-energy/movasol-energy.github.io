@@ -1,7 +1,10 @@
-contact page make 2 columns have same height at bottom
+about image ELCSUSZOTT
 
-our story text: bold and green and normal confusion
-mission statement
+statok, uj projektek - Adam, Anti
+
+text feels cramped in our story section
+
+look at pdf of om sent by ml
 
 FONTS
 
@@ -9,6 +12,7 @@ Add stuff to home page
 
 ANGOL OLDALAK FORDITASA
 
+uj projektek hozzaadasa
 KIVITELEZES ES UZEMELTETES SZORTIROZASA
 
 Jedlik Anyos bejelentes utananezes

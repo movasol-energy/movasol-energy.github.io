@@ -29,24 +29,6 @@
   --text-color: #f0f0f0;
 }
 
-:root {
-  --default-font: "Lato", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --title-font: "Ethnocentric", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --default-weight: 500;
-  --title-weight: 600;
-  --background: #f8f8f8;
-  --primary: #2FAD6F;
-  --secondary: #cdcdcd;
-  --text: #0f0f0f;
-}
-
-.dark-theme {
-  --text: #f0f0f0;
-  --background: #080808;
-  --primary: #53d091;
-  --secondary: #333333;
-}
-
 body {
   font-family: var(--default-font);
   font-weight: var(--default-weight);
@@ -1331,15 +1313,6 @@ h6 {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-#about {
-  margin-bottom: 10px;
-}
-
-.about {
-  position: relative;
-  padding-bottom: 20px;
-}
-
 .about .inner-title {
   font-size: 2.75rem;
   font-weight: var(--title-weight);
@@ -1493,7 +1466,7 @@ h6 {
 
 .about .contact-us-button {
   display: inline-block;
-  margin: 40px auto 0;
+  margin: 40px 0 0 0;
   position: static;
   transform: none;
   padding: 15px 40px;
@@ -2163,7 +2136,7 @@ h6 {
 --------------------------------------------------------------*/
 .contact .info-item {
   background-color: var(--surface-color);
-  padding: 20px 0 30px 0;
+  padding: 31px 0 30px 0;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   text-align: center;
@@ -2264,8 +2237,8 @@ h6 {
 html[lang=hu] .contact .offer-button {
   font-size: 22px !important;
   line-height: 1.2 !important;
-  padding: 8px 32px !important;
-  min-height: calc(2.4em + 16px) !important;
+  padding: 12px 32px !important;
+  min-height: calc(2.4em + 32px) !important;
   letter-spacing: 0.5px !important;
   display: flex !important;
   align-items: center !important;
